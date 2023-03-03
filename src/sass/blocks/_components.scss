@@ -1,0 +1,32 @@
+.components {
+    min-height: 437px;
+    padding: 106px 0 0 0;
+    background: #222224;
+    &__content {
+        display: grid;
+        grid-template: 1fr / 827px 1fr;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        border: 1px dashed #000;
+        .item {
+            text-align: center;
+            &__logo {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 30px auto;
+                img {
+                    width: 100%;
+                }
+                
+            }
+            &__title {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    &__text {
+        border: 1px dashed #000;
+    }
+}
