@@ -7,10 +7,11 @@
         grid-template: 1fr / 827px 1fr;
     }
     &__items {
-        display: flex;
+        display: flex; 
         justify-content: space-between;
-        border: 1px dashed #000;
+        /* border: 1px dashed #000; */
         .item {
+            width: 246px;
             text-align: center;
             &__logo {
                 width: 60px;
@@ -23,10 +24,47 @@
             }
             &__title {
                 margin: 0 0 20px 0;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                text-transform: uppercase;
+            }
+            &__text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #EDEDED;
             }
         }
     }
     &__text {
-        border: 1px dashed #000;
+        /* border: 1px dashed #000; */
+        padding: 0 0 0 67px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 250px;
+            width: 1px;
+            background-color: #000;
+            top: -32px;
+            left: 45px;
+            border: 1px solid #3D3D40;
+        }
+        .info {
+            &__title {
+                width: 329px;
+                font-weight: 700;
+                font-size: 46px;
+                line-height: 62px;
+                text-transform: capitalize;
+            }
+            &__descr {
+                width: 426px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+            }
+        }
     }
 }
