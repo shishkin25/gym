@@ -3,10 +3,12 @@
 @import 'blocks/btn';
 @import 'blocks/tagline';
 @import 'blocks/components';
+@import 'blocks/about';
 
 * {
     color: #fff;
     font-family: 'Ubuntu';
+    box-sizing: border-box;
 }
 
 .container {

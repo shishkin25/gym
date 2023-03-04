@@ -1,0 +1,136 @@
+.about {
+    min-height: 940px;
+    /* background-color: #28282A; */
+    background: #28282A url('../img/about.png') 0 183px no-repeat;
+    padding: 140px 0 135px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 523px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 60px;
+        margin: 0 0 20px 0;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 0 58px 0;
+    }
+    &__report {
+        padding: 10px 0 0 0;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 523px;
+            height: 0.5px;
+            background-color: $main-color;
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0.5px;
+            height: 130px;
+            background-color: $main-color;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__right {
+        width: 600px;
+        position: relative;
+    }
+    &__img {
+        img {
+            max-width: 100%;
+        }
+        position: relative;
+        z-index: 2;
+    }
+    &__subtitle {
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: $main-color;
+        margin: 0 0 20px 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0.5px;
+            height: 130px;
+            background-color: $main-color;
+            top: -10px;
+            left: 523px;
+        }
+    }
+    &__graphics {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 0 60px;
+    }
+    &__graphic {
+        width: 70px;
+    }
+    &__rectangle {
+        background-color:red;
+        height: 100px;
+        text-align: center;
+        margin: 0 0 11px 0; 
+
+        &_green {
+            background-color: #3C453E;
+            height: 121px;
+            line-height: 121px;
+        }
+        &_blue {
+            background-color: #36344D;
+            height: 162px;
+            line-height: 162px;
+        }
+        &_violet {
+            background-color: #463651;
+            height: 133px;
+            line-height: 133px;
+        }
+        &_brown {
+            background-color: #513F2F;
+            height: 145px;
+            line-height: 145px;
+        }
+    }
+    &__month {
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        color: #969696;
+    }
+    &__orange {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 151px;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__black {
+        position: absolute;
+        bottom: 5px;
+        left: 485px;
+        width: 176px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
