@@ -4,11 +4,12 @@
 @import 'blocks/tagline';
 @import 'blocks/components';
 @import 'blocks/about';
+@import 'blocks/join';
 
 * {
     color: #fff;
     font-family: 'Ubuntu';
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .container {
