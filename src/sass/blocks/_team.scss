@@ -1,0 +1,157 @@
+.team {
+    min-height: 1073px;
+    background: #28282A;
+    padding: 120px 0;
+    &__title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 0 0 20px 0;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+
+    &__coaches {
+        display: grid;
+        justify-content: space-between;
+        grid-template: 541px auto / repeat(3, 400px);
+    }
+
+    &__coach {
+        &-photo {
+            width: 396px;
+            margin: 0 auto;
+            position: relative;
+            img {
+                max-width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:nth-child(2) .team__coach-bg {
+                background-color: #3C2A2D;
+            }
+        }
+        &-link {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            &:nth-child(3) {
+                top: 0;
+                right: 0;
+            }
+            &:nth-child(4) {
+                top: 60px;
+                right: 0;
+            }
+            &:nth-child(5) {
+                top: 120px;
+                right: 0;
+            }
+        }
+        &-descr {
+            display: flex;
+            justify-content: space-between;
+            padding: 34px 23px;
+            background: #FFFFFF;
+            border-radius: 0px 0px 15px 15px;
+            &:nth-child(5) {
+                background-color: $main-color;
+                .team__coach {
+                    &-name, &-position {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &-data {
+            width: 190px;
+            
+        }
+        &-name {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $main-color;
+        }
+        &-position {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $main-color;
+        }
+        &-icon {
+            width: 60px;
+            height: 60px;
+            img {
+                max-width: 100%;
+            }
+        }
+        &-bg {
+            background: #333335;
+            width: 100%;
+            border-radius: 15px 100px 15px 15px;
+            height: 282px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+
+    /* &__coaches {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__coach {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        &-photo {
+            width: 396px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 100%;
+            }
+        }
+        &-background {
+            background: red;
+            width: 100%;
+            border-radius: 15px 100px 15px 15px;
+            height: 100px;
+        }
+
+        &-descr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFFFFF;
+            min-height: 128px;
+            padding: 0 23px;
+        }
+        
+        &-name {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $main-color;
+        }
+        &-position {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $main-color;
+        }
+    } */
+}
