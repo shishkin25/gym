@@ -1,9 +1,9 @@
 .header {
     background-color: #000;
-    height: 90px;
+    min-height: 90px;
+    padding: 20px 0;
     &__content {
         display: flex;
-        height: 90px;
         align-items: center;
     }
     &__logo {
@@ -16,10 +16,12 @@
         align-items: center;
         list-style-type: none;
         margin: 0;
+        padding: 0;
         /* justify-content: space-between; */
-
     }
     &__item {
+        max-width: 105px;
+        text-align: end;
         a {
             color: #fff;
             text-decoration: none;
@@ -30,8 +32,7 @@
         }
     }
     &__btn {
-        flex: 0 0 auto;
-        width: 160px;
-        height: 45px;
+        flex: 0 0 160px;
+        min-height: 45px;
     }
 }

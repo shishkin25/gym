@@ -1,6 +1,6 @@
 .team {
     min-height: 1073px;
-    background: #28282A;
+    background: #28282A url('../img/gray_circles_2.png') 35px 870px no-repeat;
     padding: 120px 0;
     &__title {
         font-weight: 700;
@@ -29,7 +29,7 @@
             width: 396px;
             margin: 0 auto;
             position: relative;
-            img {
+            .team__coach-img {
                 max-width: 100%;
                 position: absolute;
                 bottom: 0;
@@ -41,9 +41,13 @@
             }
         }
         &-link {
-            width: 48px;
-            height: 48px;
             position: absolute;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
             &:nth-child(3) {
                 top: 0;
                 right: 0;
