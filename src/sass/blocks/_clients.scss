@@ -42,7 +42,26 @@
                 display: flex;
                 justify-content: space-between;
                 width: 160px;
+                margin: 0 0 80px 0;
                 &-bg {
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            &__slider {
+                width: 200px;
+                height: 40px;
+                display: flex;
+                justify-content: space-between; 
+                .button__wrapper {
+                    width: 80px;
+                    background: #28282A;
+                    border-radius: 29px;
                     position: relative;
                     img {
                         position: absolute;

@@ -250,16 +250,18 @@
         <div class="container">
             <div class="prices__title">From Punch Pass to Monthly or Annual</div>
             <div class="prices__descr">At vero eos et accusamus et iusto odio digni goikussimos.</div>
-            <div class="prices__period">
-                <span class="prices__duration">Monthly</span>
-                <!-- все что находится в лейбле активирует чекбокс -->
-                <label class="prices__switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>              
-                <span class="prices__duration">Yearly</span> 
-                <div class="prices__discount">Save 25%</div>
-            </div>     
+            <div class="prices__period-wrapper">
+                <div class="prices__period">
+                    <span class="prices__duration">Monthly</span>
+                    <!-- все что находится в лейбле активирует чекбокс -->
+                    <label class="prices__switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>              
+                    <span class="prices__duration">Yearly</span> 
+                </div>     
+                <div class="prices__discount hide">Save 25%</div>
+            </div>
             
             <div class="prices__packages-container">
                 <div class="prices__gray-circles prices__gray-circles_right">
@@ -277,7 +279,7 @@
                         <li>Free Gym Access</li>
                         <li>24 Hour Access</li>
                     </ul>
-                    <div class="package__btn">details</div>
+                    <div class="package__btn btn">details</div>
                 </div>
                 <div class="prices__package package">
                     <div class="package__name">STANDARD</div>
@@ -290,7 +292,7 @@
                         <li>1 Group Class Included</li>
                         <li>24 Hour Access</li>
                     </ul>
-                    <div class="package__btn">details</div>
+                    <div class="package__btn btn">details</div>
                 </div>
                 <div class="prices__package package">
                     <div class="package__name">STANDARD</div>
@@ -304,17 +306,18 @@
                         <li>24 Hour Access</li>
                         <li>Body Building</li>
                     </ul>
-                    <div class="package__btn">details</div>
+                    <div class="package__btn btn">details</div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="team">
         <div class="container">
             <div class="team__title">Our Expert Team</div>
             <div class="team__text">At vero eos et accusamus et iusto odio digni goikussimos.</div>
 
-            <div class="team__coaches">
+            <!-- <div class="team__coaches">
                 <div class="team__coach-photo">
                     <div class="team__coach-bg"></div>
                     <img class="team__coach-img" src="img/jancy.png" alt="jancy">
@@ -322,15 +325,6 @@
                 <div class="team__coach-photo">
                     <div class="team__coach-bg"></div>
                     <img class="team__coach-img" src="img/peterson.png" alt="peterson">
-                    <!-- <a href="https://google.com" class="team__coach-link">
-                        <img src="icons/instagram.svg" alt="instagram" class="instagram">
-                    </a>
-                    <a href="https://google.com" class="team__coach-link">
-                        <img src="icons/twitter.svg" alt="twitter" class="twitter">
-                    </a>
-                    <a href="https://google.com" class="team__coach-link">
-                        <img src="icons/facebook.svg" alt="facebook" class="facebook">
-                    </a> -->
                     <a href="https://google.com" class="team__coach-link circle-wrapper">
                         <img src="icons/instagram.svg" alt="instagram" class="instagram">
                     </a>
@@ -372,12 +366,26 @@
                         <img src="icons/medal.svg" alt="medal">
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="team__coaches">
+            <div class="team__coaches">
                 <div class="team__coach">
-                    <div class="team__coach-photo">
-                        <img src="img/jancy.png" alt="jancy">
+                    <div class="team__coach-wrapper">
+                        <div class="team__coach-photo">
+                            <img src="img/jancy.png" alt="jancy">
+                        </div>
+                        <div class="team__coach-bg"></div>
+                        <div class="team__coach-links hide">
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/instagram.svg" alt="instagram" class="instagram">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/twitter.svg" alt="twitter" class="twitter">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/facebook.svg" alt="facebook" class="facebook">
+                            </a>
+                        </div>
                     </div>
                     <div class="team__coach-descr">
                         <div class="team__coach-data">
@@ -385,13 +393,27 @@
                             <div class="team__coach-position">Architect Designer</div>
                         </div>
                         <div class="team__coach-icon">
-                            <img src="icons/medal.svg" alt="medal">
+                            <img src="icons/cup.svg" alt="cup">
                         </div>
                     </div>
                 </div>
                 <div class="team__coach">
-                    <div class="team__coach-photo">
-                        <img src="img/peterson.png" alt="peterson">
+                    <div class="team__coach-wrapper">
+                        <div class="team__coach-photo">
+                            <img src="img/peterson.png" alt="peterson">
+                        </div>
+                        <div class="team__coach-bg"></div>
+                        <div class="team__coach-links hide">
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/instagram.svg" alt="instagram" class="instagram">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/twitter.svg" alt="twitter" class="twitter">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/facebook.svg" alt="facebook" class="facebook">
+                            </a>
+                        </div>
                     </div>
                     <div class="team__coach-descr">
                         <div class="team__coach-data">
@@ -404,24 +426,38 @@
                     </div>
                 </div>
                 <div class="team__coach">
-                    <div class="team__coach-photo">
-                        <img src="img/kane.png" alt="kane">
+                    <div class="team__coach-wrapper">
+                        <div class="team__coach-photo">
+                            <img src="img/kane.png" alt="kane">
+                        </div>
+                        <div class="team__coach-bg"></div>
+                        <div class="team__coach-links hide">
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/instagram.svg" alt="instagram" class="instagram">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/twitter.svg" alt="twitter" class="twitter">
+                            </a>
+                            <a href="https://google.com" class="team__coach-link circle-wrapper">
+                                <img src="icons/facebook.svg" alt="facebook" class="facebook">
+                            </a>
+                        </div>
                     </div>
                     <div class="team__coach-descr">
                         <div class="team__coach-data">
                             <div class="team__coach-name">Kane Williamson</div>
-                            <div class="team__coach-position">Architect Designer
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio libero consequuntur totam! Illum harum quisquam minima soluta necessitatibus blanditiis error.
-                            </div>
+                            <div class="team__coach-position">Architect Designer</div>
                         </div>
                         <div class="team__coach-icon">
-                            <img src="icons/medal.svg" alt="medal">
+                            <img src="icons/cup.svg" alt="cup">
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
+
+
     <section class="clients">
         <div class="container">
             <div class="clients__title">Happy Clients</div>
@@ -434,14 +470,22 @@
                     <div class="client__name">Mellisa Martinez</div>
                     <div class="client__networks">
                         <a href="https://google.com" class="client__networks-bg circle-wrapper">
-                            <img class="facebook" src="icons/facebook.svg" alt="facebook">
+                            <img src="icons/facebook.svg" alt="facebook" class="facebook">
                         </a>
                         <a href="https://google.com" class="client__networks-bg circle-wrapper">
-                            <img class="twitter" src="icons/twitter.svg" alt="twitter">
+                            <img src="icons/twitter.svg" alt="twitter" class="twitter">
                         </a>
                         <a href="https://google.com" class="client__networks-bg circle-wrapper">
-                            <img class="instagram" src="icons/instagram.svg" alt="instagram">
+                            <img src="icons/instagram.svg" alt="instagram" class="instagram">
                         </a>
+                    </div>
+                    <div class="client__slider button">
+                        <div class="button__wrapper">
+                            <img src="icons/back_white.svg" alt="back">
+                        </div>
+                        <div class="button__wrapper">
+                            <img src="icons/forward_white.svg" alt="forward">
+                        </div>
                     </div>
                 </div>
                 <div class="clients__images">
@@ -551,9 +595,7 @@
                         <li>Self Defense</li>
                         <li>Body Building</li>
                         <li>Psycho Trainning</li>
-                        <li>Strength Trainning
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis?
-                        </li>
+                        <li>Strength Trainning</li>
                     </ul>
                 </div>
                 <div class="footer__corporate">
@@ -570,7 +612,7 @@
                 <div class="footer__timetable">
                     <div class="footer__timetable-header">
                         <div class="footer__timetable-title">Opening Hours</div>
-                        <div class="footer__timetable-btn btn">SUNDAY OFF</div>
+                        <a class="footer__timetable-btn btn">SUNDAY OFF</a>
                     </div>
                     <div class="footer__timetable-item item">
                         <div class="item__day">
@@ -650,7 +692,20 @@
             </div>
         </div>  
     </footer>
-    
+    <div class="modal hide">
+        <div class="modal__content">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+            <form action="" class="modal__form">
+                <input class="modal__form-input" name="name" type="text" placeholder="Ваше имя">
+                <input class="modal__form-input" name="telephone" type="tel" placeholder="Ваш номер телефона">
+                <!-- <input class="modal__form-btn" type="submit" name="submit" text="Перезвонить мне"> -->
+                <button class="modal__form-btn btn">Перезвонить мне</button>
+            </form>
+        </div>
+    </div>
+  
+<script src="js/functions.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
