@@ -11,25 +11,25 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__content">
-                <div class="header__logo">
+                <a class="header__logo" href="#contacts">
                     <img src="icons/logo.svg" alt="logo">
-                </div>
+                </a>
                 <ul class="header__list">
-                    <li class="header__item"><a href="#">Home</a></li>
-                    <li class="header__item"><a href="#">About Us</a></li>
-                    <li class="header__item"><a href="#">Our Classes</a></li>
-                    <li class="header__item"><a href="#">Benefits</a></li>
-                    <li class="header__item"><a href="#">Prices</a></li>
-                    <li class="header__item"><a href="#">Contact Us</a></li>
+                    <li class="header__item"><a href="#home">Home</a></li>
+                    <li class="header__item"><a href="#about-us">About Us</a></li>
+                    <li class="header__item"><a href="#our-classes">Our Classes</a></li>
+                    <li class="header__item"><a href="#benefits">Benefits</a></li>
+                    <li class="header__item"><a href="#prices">Prices</a></li>
+                    <li class="header__item"><a href="#contacts">Contact Us</a></li>
                 </ul>
                 <button class="header__btn btn">Join With Us</button>
             </div>
         </div>
     </header>
-    <section class="tagline">
+    <section class="tagline" id="home">
         <div class="container">
             <div class="tagline__bigtext">
                 From the moment you walk through the door you know.
@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about-us">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__left">
@@ -126,7 +126,7 @@
             </div>
         </div>
     </section>
-    <section class="join">
+    <section class="join" id="our-classes">
         <div class="container">
             <div class="join__wrapper">
                 <div class="join__question">
@@ -176,7 +176,7 @@
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
         <div class="container">
             <div class="benefits__wrapper">
                 <div class="benefits__left">
@@ -246,7 +246,7 @@
         </div>
     </section>
 
-    <section class="prices">
+    <section class="prices" id="prices">
         <div class="container">
             <div class="prices__title">From Punch Pass to Monthly or Annual</div>
             <div class="prices__descr">At vero eos et accusamus et iusto odio digni goikussimos.</div>
@@ -595,13 +595,13 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__contacts">
-                    <div class="footer__contacts-logo">
+                    <a class="footer__contacts-logo" href="#header">
                         <img src="icons/logo.svg" alt="logo">
-                    </div>
+                    </a>
                     <div class="footer__contacts-descr">
                         Cum sociis Theme natoque penatibus et magnis dis parturie montes, nascetur ridiculus mus. Curabitur ullamcorper.
                     </div>
@@ -745,11 +745,14 @@
             <form action="" class="modal__form">
                 <input class="modal__form-input" name="name" type="text" placeholder="Ваше имя">
                 <input class="modal__form-input" name="telephone" type="tel" placeholder="Ваш номер телефона">
-                <!-- <input class="modal__form-btn" type="submit" name="submit" text="Перезвонить мне"> -->
                 <button class="modal__form-btn btn">Перезвонить мне</button>
             </form>
         </div>
     </div>
+
+    <a href="#header" class="pageup hide">
+        <img src="icons/pageup.svg" alt="pageup">
+    </a>
   
 <script src="js/functions.js"></script>
 <script src="js/script.js"></script>

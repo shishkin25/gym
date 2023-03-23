@@ -76,25 +76,51 @@ const buttonBack = buttonWrapper[0];
 const buttonForward = buttonWrapper[1];
 buttonWrapper.forEach((currentButton) => {
     currentButton.addEventListener('click', (e) => {
-        clients[clickCounter].classList.remove('choosen-client');
-        contacts[clickCounter].classList.add('hide');
-        if (currentButton === buttonBack) {
-            if (clickCounter == 0) {
-                clickCounter = 3;
-            } else {
-                clickCounter--;
+        const timerId = setTimeout(() => {
+            clients[clickCounter].classList.remove('choosen-client');
+            contacts[clickCounter].classList.add('hide');
+            if (currentButton === buttonBack) {
+                if (clickCounter == 0) {
+                    clickCounter = 3;
+                } else {
+                    clickCounter--;
+                }
             }
-        }
-        
-        if (currentButton === buttonForward) {
-            if (clickCounter == 3) {
-                clickCounter = 0;
-            } else {
-                clickCounter++;
-            }
-        }        
-
-        clients[clickCounter].classList.add('choosen-client');
-        contacts[clickCounter].classList.remove('hide');
+            
+            if (currentButton === buttonForward) {
+                if (clickCounter == 3) {
+                    clickCounter = 0;
+                } else {
+                    clickCounter++;
+                }
+            }        
+            clients[clickCounter].classList.add('choosen-client');
+            contacts[clickCounter].classList.remove('hide');
+        }, 180);
     });
 });
+
+
+window.addEventListener('scroll', () => {
+    const pageup = body.querySelector('.pageup')
+    if (window.scrollY > 1200) {
+        pageup.classList.remove('hide');
+    } else {
+        pageup.classList.add('hide');
+    }
+});
+
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substring(1);
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
