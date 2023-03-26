@@ -8,6 +8,7 @@
     }
     &__question {
         width: 400px;
+        /* max-width: 400px; */
         height: 313px;
         background-color: $main-color;
         border-radius: 10px;
@@ -34,6 +35,7 @@
     }
     &__reasons {
         width: 790px;
+        /* max-width: 790px; */
         display: grid;
         grid-template: repeat(2, auto) / repeat(3, 1fr);
         row-gap: 65px;

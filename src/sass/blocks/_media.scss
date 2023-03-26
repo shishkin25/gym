@@ -1,0 +1,276 @@
+@media (max-width: 1820px) {
+    .about {
+        background: #28282A;
+        &__black {
+            display: none;
+        }
+    }
+    .clients {
+        background: #222224;
+    }
+}
+
+@media (max-width: 1461px) {
+    .prices {
+        &__gray-circles {
+            &_right {
+                right: 0;
+            }
+            &_left {
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .container {
+        padding: 0 35px;
+    }
+    .tagline {
+        &__bigtext {
+            font-size: 65px;
+        }
+    }
+    .components {
+        &__content {
+            display: block;
+        }
+        &__items {
+            width: 100%;
+            justify-content: space-around;
+            .item {
+                width: 250px;
+            }
+        }   
+        &__text-less1320px {
+            .info {
+                &__title {
+                    font-size: 40px;
+                    text-align: center;
+                    width: 100%;
+                }
+                &__descr {
+                    text-align: center;
+                }
+            }
+            
+        }
+    }
+    .about {
+        &__title {
+            font-size: 42px;
+        }
+        &__descr {
+            font-size: 16px;
+        }
+        &__left {
+            width: 450px;
+        }
+        &__right {
+            width: 500px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .join {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__question {
+            margin: 0 0 70px 0;
+        }
+    }
+    .benefits {
+        &__title {
+            font-size: 36px;
+        }
+        &__description {
+            font-size: 16px;
+        }
+        &__item {
+            justify-content: start;
+            align-items: center;
+        }
+        &__text {
+            width: 390px;
+            padding: 0 0 0 30px;
+        }
+        &__right {
+            width: 630px;
+        }
+        &__img {
+            &:nth-child(2) {
+                top: 82px;
+                left: 275px;
+            }
+            &:nth-child(4) {
+                top: 362px;
+                left: 275px;
+            }
+        }
+    }
+    .prices {
+        &__title {
+            font-size: 45px;
+        }
+        &__descr {
+            font-size: 16px;
+        }
+        &__package {
+            width: 360px;
+        }
+
+        .package {
+            &__price {
+                &_new {
+                    font-size: 58px;
+                }
+            }
+        }
+    }
+    .team {
+        &__coach {
+            width: 360px;
+            &-photo {
+                margin: 0 auto;
+            }
+            &:nth-child(1) {
+                .team__coach-photo {
+                    width: 275px;
+                }
+            }
+            &:nth-child(2) {
+                .team__coach-photo {
+                    width: 335px;
+                }
+            }
+            &:nth-child(3) {
+                .team__coach-photo {
+                    width: 355px;
+                }
+            }
+        }
+    }
+    .clients {
+        &__images-decoration {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .benefits {
+        &__title {
+            font-size: 32px;
+        }
+        &__description {
+            width: 355px;
+            font-size: 14px;
+        }
+        &__text {
+            width: 290px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__descr {
+            font-size: 14px;
+        }
+        &__right {
+            width: 505px;
+            margin: 82px 0 0 0;
+        }
+        &__img {
+            width: 260px;
+            &:nth-child(2) {
+                top: 42px;
+                left: 245px;
+            }
+            &:nth-child(3) {
+                top: 220px;
+                left: 0;
+            }
+            &:nth-child(4) {
+                top: 285px;
+                left: 238px;
+            }
+        }
+    }
+    .about {
+        &__title {
+            font-size: 39px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+        &__left {
+            width: 425px;
+        }
+        &__right {
+            width: 450px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .prices {
+        .package {
+            &__name {
+                font-size: 20px;
+            }   
+            &__price {
+                &_new {
+                    font-size: 50px;
+                }
+            }
+            &__elements {
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
+        &__package {
+            width: 300px;
+        }
+    }
+    .team {
+        &__coach {
+            width: 300px;
+            &-bg {
+                height: 235px;
+            }
+            &-link {
+                width: 40px;
+                height: 40px;
+            }
+            &-descr {
+                min-height: 146px;
+            }
+            &-data {
+                width: 153px;
+            }
+            &-photo {
+                margin: 0 auto;
+            }
+            &:nth-child(1) {
+                .team__coach-photo {
+                    width: 236px;
+                }
+            }
+            &:nth-child(2) {
+                .team__coach-photo {
+                    width: 285px;
+                }
+            }
+            &:nth-child(3) {
+                .team__coach-photo {
+                    width: 300px;
+                }
+            }
+        }
+        
+    }
+}

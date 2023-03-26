@@ -1,7 +1,12 @@
-.show {
+.makeDisplayBlock {
     display: block;
 }
 
-.showDf {
+.makeDisplayFlex {
     display: flex;
 }
+
+.makeDisplayInlineBlock {
+    display: inline-block;
+}
+

@@ -9,7 +9,7 @@
     }
     &__left {
         padding: 81px 0 0 0;
-        width: 570px;
+        /* width: 570px; */
     }
     &__title {
         font-weight: 700;
@@ -26,7 +26,8 @@
     }
     &__item {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        align-items: center;
         margin: 0 0 55px 0;
     }
     &__icon {
@@ -50,8 +51,15 @@
         font-size: 24px;
         /* line-height: 28px; */
     }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #969696;
+    }
     &__text {
         width: 470px;
+        padding: 0 0 0 20px;
     }
     &__right {
         width: 679px;
@@ -59,7 +67,7 @@
     }
     &__img {
         width: 350px;
-        height: 370px;
+        /* height: 370px; */
         img {
             max-width: 100%;
         }

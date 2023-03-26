@@ -37,11 +37,11 @@ modal.addEventListener('click', (e) => {
 pricesSwitch.addEventListener('click', (e) => {
     let timerId;
     if (e.target.checked) {
-        timerId = setTimeout(showElement, 300, discount);
-        /* showElement(discount); */
+        /* timerId = setTimeout(showElement, 300, discount); */
+        timerId = setTimeout(RemoveAndAddClass, 300, discount, 'hide', 'makeDisplayInlineBlock');
     } else {
-        /* hideElement(discount); */
-        timerId = setTimeout(hideElement, 300, discount);
+        /* timerId = setTimeout(hideElement, 300, discount); */
+        timerId = setTimeout(RemoveAndAddClass, 300, discount, 'makeDisplayInlineBlock', 'hide');
     }
 });
 
@@ -50,10 +50,10 @@ pricesSwitch.addEventListener('click', (e) => {
 coaches.forEach((coach, index) => {
     let timerId;
     coach.addEventListener('mouseover', (e) => {
-        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'showDf')
+        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
     });
     coach.addEventListener('mouseout', (e) => {
-        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'showDf', 'hide');
+        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
     });
 })
 
@@ -124,3 +124,14 @@ for (let anchor of anchors) {
     })
   })
 }
+
+
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth < 1320) {
+        body.querySelector('.components__text').classList.add('hide');
+        body.querySelector('.components__text-less1320px').classList.remove('hide');
+    } else {
+        body.querySelector('.components__text').classList.remove('hide');
+        body.querySelector('.components__text-less1320px').classList.add('hide');
+    }
+  });

@@ -1,10 +1,10 @@
 function showElement(element) {
     element.classList.remove('hide');
-    element.classList.add('show');
+    element.classList.add('makeDisplayBlock');
 }
 
 function hideElement(element) {
-    element.classList.remove('show');
+    element.classList.remove('makeDisplayBlock');
     element.classList.add('hide');
 }
 

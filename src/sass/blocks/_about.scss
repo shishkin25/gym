@@ -28,7 +28,7 @@
         &::before {
             content: '';
             position: absolute;
-            width: 523px;
+            width: 100%;
             height: 0.5px;
             background-color: $main-color;
             top: 0;
@@ -70,7 +70,7 @@
             height: 130px;
             background-color: $main-color;
             top: -10px;
-            left: 523px;
+            left: 100%;
         }
     }
     &__graphics {
