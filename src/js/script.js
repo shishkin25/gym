@@ -127,7 +127,7 @@ for (let anchor of anchors) {
 
 
 window.addEventListener('resize', (e) => {
-    if (window.innerWidth < 1320) {
+    if (window.innerWidth < 1321) {
         body.querySelector('.components__text').classList.add('hide');
         body.querySelector('.components__text-less1320px').classList.remove('hide');
     } else {

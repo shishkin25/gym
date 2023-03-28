@@ -23,13 +23,16 @@
     }
     &__icon {
         width: 82px;
-        position: relative;
+        /* position: relative; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             max-width: 100%;
-            position: absolute;
+            /* position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); */
         }
     }
     &__descr {

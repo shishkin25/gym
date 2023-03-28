@@ -113,6 +113,12 @@
         &-wrapper {
             position: relative;
         }
+        &-icon {
+            width: 62px;
+            img {
+                max-width: 100%;
+            }
+        }
         &-photo {
             display: flex;
             justify-content: center;
@@ -141,6 +147,26 @@
         }
         &-link {
             position: relative;
+            .link-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                /* padding: 15px; */
+                width: 16px;
+                img {
+                    max-width: 100%;
+                }
+            }
+            &:last-child {
+                .link-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            /* position: relative;
             img {
                 position: absolute;
                 top: 50%;
@@ -148,7 +174,7 @@
                 transform: translate(-50%, -50%);
                 z-index: 2; 
                 padding: 15px;
-            }
+            } */
             margin: 0 0 10px 0;
         }
 
@@ -170,13 +196,13 @@
         &-name {
             font-weight: 700;
             font-size: 24px;
-            line-height: 28px;
+            /* line-height: 28px; */
             color: $main-color;
         }
         &-position {
             font-weight: 400;
             font-size: 18px;
-            line-height: 30px;
+            /* line-height: 30px; */
             color: $main-color;
         }
 

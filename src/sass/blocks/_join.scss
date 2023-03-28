@@ -1,10 +1,11 @@
 .join {
     background: #222224;
     min-height: 500px;
-    padding: 79px 0 0 0;
+    padding: 80px 0 107px 0;
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__question {
         width: 400px;
@@ -34,15 +35,18 @@
         margin: 0 auto;
     }
     &__reasons {
-        width: 790px;
+        /* width: 790px; */
         /* max-width: 790px; */
         display: grid;
-        grid-template: repeat(2, auto) / repeat(3, 1fr);
+        /* grid-template: repeat(2, auto) / repeat(3, 1fr); */
+        grid-template: repeat(2, auto) / repeat(3, 217px);
         row-gap: 65px;
+        column-gap: 50px;
         padding: 34px 0 34px 0;
     }
     &__item {
         display: flex;
+        align-items: center;
     }
     &__text {
         font-weight: 700;
