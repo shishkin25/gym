@@ -45,8 +45,12 @@
             .item {
                 width: 250px;
             }
-        }   
+        }  
+        &__text {
+            display: none;
+        } 
         &__text-less1320px {
+            display: block;
             .info {
                 &__title {
                     font-size: 40px;
@@ -138,6 +142,14 @@
         }
     }
     .team {
+        min-height: 1018px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 818px no-repeat;
+        &__title {
+            font-size: 54px;
+        }
+        &__text {
+            font-size: 17px;
+        }
         &__coach {
             width: 360px;
             &-photo {
@@ -192,6 +204,23 @@
         &__smalltext {
             width: 550px;
             font-size: 17px;
+        }
+    }
+    .components {
+        &__items {
+            .item {
+                width: 240px;
+            }
+        }
+        .info {
+            width: 385px;
+            &__title {
+                font-size: 37px;
+                margin: 0 0 10px 0;
+            }
+            &__descr {
+                font-size: 16px;
+            }
         }
     }
     .benefits {
@@ -260,6 +289,22 @@
         }
     }
     .prices {
+        &__title {
+            width: 421px;
+            font-size: 42px;
+        }
+        &__descr {
+            font-size: 14px;
+            width: 380px;
+        }
+        &__period {
+            &-wrapper {
+                grid-template: 1fr/39.5% 1fr;
+            }
+        }
+        &__duration {
+            font-size: 15px;
+        }
         .package {
             &__name {
                 font-size: 20px;
@@ -280,6 +325,8 @@
         }
     }
     .team {
+        min-height: 955px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 752px no-repeat;
         &__title {
             font-size: 50px;
         }
@@ -424,9 +471,32 @@
     }
 
 
+    .components {
+        &__items {
+            .item {
+                width: 210px;
+                &__logo {
+                    width: 50px;
+                    height: 50px;
+                }
+                &__title {
+                    font-size: 18px;
+                }
+                &__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 
     
     .about {
+        &__title {
+            text-align: center;
+        }
+        &__descr {
+            text-align: center;
+        }
         &__wrapper {
             flex-direction: column;
             align-items: center;
@@ -463,15 +533,15 @@
             font-size: 13px;
         }
         &__icon {
-            width: 55px;
-            height: 55px;
+            width: 65px;
+            height: 65px;
             .img-wrapper {
                 width: 40px;
                 height: 40px;
             }
         }
         &__text {
-            width: 240px;
+            width: 225px;
             padding: 0 0 0 17px;
         }
         &__subtitle {
@@ -480,24 +550,99 @@
         &__descr {
             font-size: 13px;
         }
-        &__right {
-            width: 419px;
+        /* &__right {
+            width: 410px;
         }
         &__img {
-            width: 220px;
+            width: 210px;
             &:nth-child(2) {
-                /* top: 42px; */
+                top: 42px;
                 left: 200px;
             }
+            &:nth-child(3) {
+                top: 215px;
+                left: 10px;
+            }
             &:nth-child(4) {
-                top: 250px;
+                top: 240px;
                 left: 200px;
+            }
+        } */
+        &__right {
+            width: 403px;
+        }
+        &__img {
+            width: 240px;
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            &:nth-child(2) {
+                top: 120px;
+                left: 168px;
+            }
+            &:nth-child(3) {
+                top: 248px;
+                left: -5px;
+            }
+            &:nth-child(4) {
+                top: 366px;
+                left: 168px;
+            }
+        }
+    }
+
+    .prices {
+        &__title {
+            font-size: 38px;
+        }
+        &__package {
+            width: 228px;
+        }
+        .package {
+            &__name {
+                font-size: 18px;
+            }
+            &__price {
+                &_new {
+                    font-size: 40px;
+                }
+            }
+            &__elements {
+                li {
+                    font-size: 13px;
+                }
+            }
+            &__btn {
+                width: 130px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+            }
+        }
+        &__period {
+            &-wrapper {
+                grid-template: 1fr/36.5% 1fr;
+            }
+            margin: 0 10px 0 0;
+        }
+        &__gray-circles {
+            &_right, &_left {
+                width: 130px;
             }
         }
     }
 
 
     .team {
+        min-height: 849px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 650px no-repeat;
+        &__title {
+            font-size: 42px;
+        }
+        &__text {
+            font-size: 15px;
+        }
         &__coach {
             width: 225px;
             &-position {
@@ -528,9 +673,6 @@
                     }
                 }
             }
-           /*  &-photo {
-                
-            } */
             &:nth-child(1) {
                 .team__coach-photo {
                     width: 173px;
@@ -567,6 +709,7 @@
             margin: 0 auto 70px auto;
             &__text {
                 margin: 0 0 25px 0;
+                text-align: center;
             }
             &__contacts {
                 margin: 0 0 45px 0;
@@ -604,6 +747,121 @@
         }
         &__item {
             margin: 0 auto;
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            justify-content: space-around;
+        }
+        &__services, &__corporate {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 2;
+        }
+        .container {
+            padding: 0;
+        }
+        &__list, &__btn {
+            display: none;
+        }
+        &__content {
+            justify-content: space-between;
+            position: relative;
+            padding: 20px 15px;
+        }
+        &__list {
+            display: block;
+            position: fixed;
+            top: -800px;
+            left: 0;
+            width: 100%;
+            /* min-height: 400px; */
+            height: 100%;
+            background-color: #222224;
+            /* padding: 20px 0; */
+            padding: 100px 0 0 0;
+            opacity: 0.98;
+            transition: all 0.3s ease 0s;
+            &.active {
+                top: 0;
+            }
+        }
+        &__logo {
+            position: relative;
+            z-index: 3;
+        }
+        &__burger {
+            width: 40px;
+            height: 30px;
+            position: relative;
+            z-index: 3;
+            &::before, &::after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color:#fff;
+                position: absolute;
+                transition: all 0.3s ease 0s;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+            }
+            &::after {
+                bottom: 0;
+                left: 0;
+            }
+            & span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                transition: all 0.3s ease 0s;
+            }
+            &.active {
+                &:before {
+                    transform: rotate(45deg) translateY(-50%);
+                    top: 50%;
+                }
+                &:after {
+                    transform: rotate(-45deg) translateY(50%);
+                    bottom: 50%;
+                }
+                & span {
+                    display: none;
+                }
+            }
+        }
+        &__item {
+            max-width: none;
+            &:last-child {
+                margin: 0;
+            }
+            text-align: center;
+            margin: 0 0 30px 0;
+            a {
+                font-size: 27px;
+            }
         }
     }
 }

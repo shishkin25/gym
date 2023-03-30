@@ -126,7 +126,7 @@ for (let anchor of anchors) {
 }
 
 
-window.addEventListener('resize', (e) => {
+/* window.addEventListener('resize', (e) => {
     if (window.innerWidth < 1321) {
         body.querySelector('.components__text').classList.add('hide');
         body.querySelector('.components__text-less1320px').classList.remove('hide');
@@ -134,4 +134,21 @@ window.addEventListener('resize', (e) => {
         body.querySelector('.components__text').classList.remove('hide');
         body.querySelector('.components__text-less1320px').classList.add('hide');
     }
-  });
+}); */
+
+
+body.querySelector('.header__burger').addEventListener('click', () => {
+    body.querySelector('.header__burger').classList.toggle('active');
+    body.querySelector('.header__list').classList.toggle('active');
+    body.classList.toggle('lock');
+});
+
+/* в случае когда мы переходим по ссылке (из бургера) к выбранной секции нужно сделать так, чтобы само меню бургер пропадало,
+ как при нажатии на крестик. Данный код именно это и делает */
+body.querySelector('.header__list').addEventListener('click', (e) => {
+    if (e.target.tagName == "A" && window.innerWidth <= 767) {
+        body.querySelector('.header__burger').classList.toggle('active');
+        body.querySelector('.header__list').classList.toggle('active');
+        body.classList.toggle('lock');
+    }
+});
