@@ -48,6 +48,12 @@
         display: flex;
         align-items: center;
     }
+    &__icon {
+        width: 90px;
+        img {
+            max-width: 100%;
+        }
+    }
     &__text {
         font-weight: 700;
         font-size: 24px;

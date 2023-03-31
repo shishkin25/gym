@@ -864,4 +864,161 @@
             }
         }
     }
+
+    .tagline {
+        background: url(../img/man.png) -920px 0 no-repeat;
+        &__bigtext {
+            width: 360px;
+            font-size: 35px;
+        }
+        &__smalltext {
+            width: 265px;
+            font-size: 15px;
+        }
+        &__btn {
+            width: 160px;
+        }
+    }
+
+    .components {
+        &__items {
+            justify-content: space-between;
+            .item {
+                width: 155px;
+            }
+        }
+        .info {
+            &__title {
+                font-size: 32px;
+            }
+            &__descr {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    .join {
+        &__question {
+            width: 360px;
+        }
+        &__subtitle {
+            font-size: 36px;
+            width: 270px;
+        }
+        &__btn {
+            width: 145px;
+        }
+        &__reasons {
+            grid-template: repeat(3,auto)/repeat(2,203px);
+        }
+        &__icon {
+            width: 75px;
+        }
+    }
+
+
+    .benefits {
+        &__right {
+            display: none;
+        }
+        &__left {
+            width: 100%;
+            padding: 0;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__description {
+            width: 335px;
+            text-align: center;
+            margin: 0 auto 50px auto;
+            font-size: 15px;
+        }
+        &__item {
+            justify-content: space-between;
+            width: 380px;
+            margin: 0 auto 50px auto;
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+        &__text {
+            width: 300px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+    }
+
+    .prices {
+        padding: 100px 0;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            width: 270px;
+        }
+        &__period-wrapper {
+            grid-template: 1fr/32% 1fr;
+        }
+        &__packages-container {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        &__package {
+            min-height: 460px;
+            width: 270px;
+            padding: 20px 0;
+            margin: 0 0 45px 0;
+            &:last-child {
+                margin: 0;
+            }
+            /* min-height: auto; */
+            .package {
+                &__name {
+                    margin: 0 0 15px 0;
+                }
+                &__price {
+                    &_old {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+        &__gray-circles {
+            display: none;
+        }
+    }
+
+    .team {
+        background: #28282A;
+        &__coaches {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        &__coach {
+            margin: 0 0 55px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .clients {
+        &__title {
+            font-size: 32px;
+        }
+        &__subtitle {
+            width: 300px;
+            margin: 0 auto 50px auto;
+        }
+    }
 }
