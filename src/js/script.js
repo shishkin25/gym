@@ -152,3 +152,38 @@ body.querySelector('.header__list').addEventListener('click', (e) => {
         body.classList.toggle('lock');
     }
 });
+
+/* benefitsSubtitles.forEach((subtitle) => {
+    subtitle.remove();
+});
+body.querySelectorAll('.benefits__item').forEach((item, i) => {
+    item.prepend(benefitsSubtitles[i]);
+}); */
+
+
+/* const benefitsSubtitles = body.querySelectorAll('.benefits__text .benefits__subtitle');
+console.log(benefitsSubtitles);
+benefitsSubtitles.forEach((subtitle) => {
+    subtitle.remove();
+});
+console.log(benefitsSubtitles); */
+
+
+const benefitsItems = body.querySelectorAll('.benefits__item');
+const benefitsSubtitles = body.querySelectorAll('.benefits__text .benefits__subtitle');
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth < 481) {
+        benefitsSubtitles.forEach((subtitle) => {
+            subtitle.remove();
+        });
+        benefitsItems.forEach((item, i) => {
+            item.prepend(benefitsSubtitles[i]);
+        });
+    } else {
+        benefitsItems.forEach((item, i) => {
+            if (item.querySelector('.benefits__text .benefits__subtitle') === null) {
+                item.querySelector('.benefits__text').prepend(benefitsSubtitles[i]);
+            }
+        });
+    }
+});

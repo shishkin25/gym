@@ -65,19 +65,20 @@
         transform: translateX(40px);
     }
 
-
-    &__period-wrapper { 
-        display: grid;
-        grid-template: 1fr / 41% 1fr;
-        margin: 0 0 50px 0;
+    &__tariffs {
+        width: 302px;
+        margin: 0 auto 50px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateX(40px);
     }
 
     &__period {
-        display: inline-flex;
+        display: flex;
         width: 210px;
         justify-content: space-between;
         align-items: center;
-        margin: 0 18px 0 0;
     }
     &__duration {
         font-weight: 500;
@@ -85,7 +86,6 @@
         line-height: 40px;
     }
     &__discount {
-        display: inline-block;
         width: 70px;
         height: 30px;
         background-color: #343436;
