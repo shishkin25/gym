@@ -15,21 +15,21 @@ btns.forEach((item) => {
     item.addEventListener('click', (e) => {
         const timerId = setTimeout(showElement, 300, modal);
         /* showElement(modal); */
-        body.style.overflow = 'hidden';
+        body.classList.toggle('lock');
     });
 });
 
 close.addEventListener('click', (e) => {
     const timerId = setTimeout(hideElement, 300, modal);
     /* hideElement(modal); */
-    body.style.overflow = 'visible';
+    body.classList.toggle('lock');
 });
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         /* hideElement(modal); */
         const timerId = setTimeout(hideElement, 300, modal);
-        body.style.overflow = 'visible';
+        body.classList.toggle('lock');
     }
 });
 

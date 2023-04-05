@@ -105,6 +105,7 @@
     .item {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 17px 0;
         position: relative;
         &::after {
@@ -123,9 +124,12 @@
         }
         &__day {
             display: flex;
+            align-items: center;
             &-name {
                 width: 88px;
                 margin: 0 0 0 13px;
+                font-weight: 500;
+                font-size: 14px;
             }
         }
         &__icon {
@@ -137,6 +141,8 @@
         &__hours {
             width: 155px;
             padding: 0 5px 0 0;
+            font-weight: 300;
+            font-size: 14px;
         }
     }
 }
