@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -14,7 +15,7 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__content">
-                <a class="header__logo" href="#contacts">
+                <a class="header__logo" href="./">
                     <img src="icons/logo.svg" alt="logo">
                 </a>
                 <ul class="header__list">
@@ -25,7 +26,7 @@
                     <li class="header__item"><a href="#prices">Prices</a></li>
                     <li class="header__item"><a href="#contacts">Contact Us</a></li>
                 </ul>
-                <button class="header__btn btn">Join With Us</button>
+                <button class="header__btn btn cause_modal">Join With Us</button>
                 <div class="header__burger">
                     <span></span>
                 </div>
@@ -40,7 +41,7 @@
             <div class="tagline__smalltext">
                 At vero eos et accusamus et iusto odio digni goikussimos ducimus qui to bonfoe blanditiis praese. Ntium voluum deleniti atque corrupti quos.
             </div>
-            <div class="tagline__btn btn">Learn more</div>
+            <div class="tagline__btn btn cause_modal">Learn more</div>
         </div>
     </section>
     <section class="components">
@@ -146,7 +147,7 @@
             <div class="join__wrapper">
                 <div class="join__question">
                     <div class="join__subtitle">Are you ready for join us?</div>
-                    <div class="join__btn btn">Learn about</div>
+                    <div class="join__btn btn cause_modal">Learn about</div>
                 </div>
 
                 <div class="join__reasons">
@@ -324,7 +325,7 @@
                             <li>Free Gym Access</li>
                             <li>24 Hour Access</li>
                         </ul>
-                        <div class="package__btn btn">details</div>
+                        <div class="package__btn btn cause_modal">details</div>
                     </div>
                     <div class="prices__package package">
                         <div class="package__name">PREMIUM</div>
@@ -337,7 +338,7 @@
                             <li>1 Group Class Included</li>
                             <li>24 Hour Access</li>
                         </ul>
-                        <div class="package__btn btn">details</div>
+                        <div class="package__btn btn cause_modal">details</div>
                     </div>
                     <div class="prices__package package">
                         <div class="package__name">EXPERT</div>
@@ -351,7 +352,7 @@
                             <li>24 Hour Access</li>
                             <li>Body Building</li>  
                         </ul>
-                        <div class="package__btn btn">details</div>
+                        <div class="package__btn btn cause_modal">details</div>
                     </div>
                 </div>
                 <!-- <div class="prices__package package">
@@ -898,11 +899,11 @@
     <div class="modal hide">
         <div class="modal__content">
             <div class="modal__close">&times;</div>
-            <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+            <div class="modal__title">We will get back to you as soon as possible!</div>
             <form action="" class="modal__form">
-                <input class="modal__form-input" name="name" type="text" placeholder="Ваше имя">
-                <input class="modal__form-input" name="telephone" type="tel" placeholder="Ваш номер телефона">
-                <button class="modal__form-btn btn">Перезвонить мне</button>
+                <input class="modal__form-input" name="name" type="text" placeholder="Your name" required>
+                <input class="modal__form-input" name="telephone" type="tel" placeholder="Your phone number" required>
+                <button class="modal__form-btn btn">Call me back</button>
             </form>
         </div>
     </div>

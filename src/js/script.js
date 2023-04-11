@@ -1,7 +1,8 @@
 const body = document.querySelector('body');
-const btns = body.querySelectorAll('.btn');
+const btns = body.querySelectorAll('.cause_modal');
 const close = body.querySelector('.modal__close');
 const modal = body.querySelector('.modal');
+const modalForm = body.querySelector('.modal__form');
 const pricesSwitch = body.querySelector('.prices__switch input');
 const discount = body.querySelector('.prices__discount');
 const coaches = body.querySelectorAll('.team__coach');
@@ -21,14 +22,17 @@ btns.forEach((item) => {
 
 close.addEventListener('click', (e) => {
     const timerId = setTimeout(hideElement, 300, modal);
-    /* hideElement(modal); */
+    modalForm.reset();
+    /* const timerId2 = setTimeout(modalForm.reset, 300); */
     body.classList.toggle('lock');
+
 });
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        /* hideElement(modal); */
         const timerId = setTimeout(hideElement, 300, modal);
+        modalForm.reset();
+        /* const timerId2 = setTimeout(modalForm.reset, 300); */
         body.classList.toggle('lock');
     }
 });
@@ -47,6 +51,7 @@ pricesSwitch.addEventListener('click', (e) => {
 
 
 
+
 coaches.forEach((coach, index) => {
     let timerId;
     coach.addEventListener('mouseover', (e) => {
@@ -55,7 +60,40 @@ coaches.forEach((coach, index) => {
     coach.addEventListener('mouseout', (e) => {
         timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
     });
-})
+});
+let hasListener = true;
+
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth < 768) {
+        coaches.forEach((coach, index) => {
+            coach.querySelector('.team__coach-links').classList.remove('hide');
+            let timerId;
+            coach.removeEventListener('mouseover', (e) => {
+                timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
+            });
+            coach.removeEventListener('mouseout', (e) => {
+                timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
+            });
+            hasListener = false;
+        });
+    } else {
+        if (!hasListener) {
+            coaches.forEach((coach, index) => {
+                coach.querySelector('.team__coach-links').classList.add('hide');
+                let timerId;
+                coach.addEventListener('mouseover', (e) => {
+                    timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
+                });
+                coach.addEventListener('mouseout', (e) => {
+                    timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
+                });
+            });
+            hasListener = true;
+        }
+    }
+});
+
+
 
 // заменая белой стрелки на красную при наведении на кнопку
 buttonWrapper.forEach((element) => {
@@ -187,3 +225,6 @@ window.addEventListener('resize', (e) => {
         });
     }
 });
+
+
+modalForm.addEventListener('submit', formSubmit);
