@@ -51,42 +51,115 @@ pricesSwitch.addEventListener('click', (e) => {
 
 
 
-
-coaches.forEach((coach, index) => {
-    let timerId;
-    coach.addEventListener('mouseover', (e) => {
-        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
+/* let handler;
+const mouseHandler = (element) => {
+    element.classList.toggle('hide');
+}
+let arrayHandlers = [];
+let hasListener = false;
+if (window.innerWidth > 768) {
+    coaches.forEach((coach, index) => {
+        handler = () => {
+            mouseHandler(links[index])
+        }
+        coach.addEventListener('mouseover', handler);
+        coach.addEventListener('mouseout', handler);
+        arrayHandlers.push(handler);
     });
-    coach.addEventListener('mouseout', (e) => {
-        timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
+    hasListener = true;
+} else {
+    coaches.forEach((coach, index) => {
+        links[index].classList.remove('hide');
     });
-});
-let hasListener = true;
+    hasListener = false;
+}
 
 window.addEventListener('resize', (e) => {
     if (window.innerWidth < 768) {
-        coaches.forEach((coach, index) => {
-            coach.querySelector('.team__coach-links').classList.remove('hide');
-            let timerId;
-            coach.removeEventListener('mouseover', (e) => {
-                timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
+        if (hasListener){
+            coaches.forEach((coach, index) => {
+                coach.removeEventListener('mouseover', arrayHandlers[index]);
+                coach.removeEventListener('mouseout', arrayHandlers[index]);
+                links[index].classList.remove('hide');
+                hasListener = false;
             });
-            coach.removeEventListener('mouseout', (e) => {
-                timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
-            });
-            hasListener = false;
-        });
+        }
     } else {
         if (!hasListener) {
+            arrayHandlers = [];
             coaches.forEach((coach, index) => {
-                coach.querySelector('.team__coach-links').classList.add('hide');
-                let timerId;
-                coach.addEventListener('mouseover', (e) => {
-                    timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'hide', 'makeDisplayFlex');
-                });
-                coach.addEventListener('mouseout', (e) => {
-                    timerId = setTimeout(RemoveAndAddClass, 100, links[index], 'makeDisplayFlex', 'hide');
-                });
+                links[index].classList.add('hide');
+                handler = () => {
+                    mouseHandler(links[index])
+                }
+                coach.addEventListener('mouseover', handler);
+                coach.addEventListener('mouseout', handler);
+                arrayHandlers.push(handler);
+            });
+            hasListener = true;
+        }
+    }
+}); */
+
+
+let overHandler;
+let outHandler;
+const mouseOverHandler = (element) => {
+    element.classList.remove('hide');
+}
+const mouseOutHandler = (element) => {
+    element.classList.add('hide');
+}
+let arrayMouseOverHandlers = [];
+let arrayMouseOutHandlers = [];
+let hasListener = false;
+if (window.innerWidth > 768) {
+    coaches.forEach((coach, index) => {
+        overHandler = () => {
+            mouseOverHandler(links[index]);
+        };
+        outHandler = () => {
+            mouseOutHandler(links[index]);
+        };
+        coach.addEventListener('mouseover', overHandler);
+        coach.addEventListener('mouseout', outHandler);
+        arrayMouseOverHandlers.push(overHandler);
+        arrayMouseOutHandlers.push(outHandler);
+    });
+    hasListener = true;
+} else {
+    coaches.forEach((coach, index) => {
+        links[index].classList.remove('hide');
+    });
+    hasListener = false;
+}
+
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth < 768) {
+        if (hasListener){
+            coaches.forEach((coach, index) => {
+                coach.removeEventListener('mouseover', arrayMouseOverHandlers[index]);
+                coach.removeEventListener('mouseout', arrayMouseOutHandlers[index]);
+                links[index].classList.remove('hide');
+                hasListener = false;
+            });
+        }
+    } else {
+        if (!hasListener) {
+            arrayMouseOverHandlers = [];
+            arrayMouseOutHandlers = [];
+            coaches.forEach((coach, index) => {
+                links[index].classList.add('hide');
+                overHandler = () => {
+                    mouseOverHandler(links[index]);
+                };
+                outHandler = () => {
+                    mouseOutHandler(links[index]);
+                };
+                coach.addEventListener('mouseover', overHandler);
+                coach.addEventListener('mouseout', outHandler);
+                arrayMouseOverHandlers.push(overHandler);
+                arrayMouseOutHandlers.push(outHandler);
             });
             hasListener = true;
         }

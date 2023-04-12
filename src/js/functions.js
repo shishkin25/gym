@@ -22,3 +22,5 @@ function formSubmit (event) {
     body.classList.toggle('lock');
     const timerId2 = setTimeout(alert, 300, 'Ваша заявка отправлена!');
 }
+
+
