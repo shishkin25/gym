@@ -14,25 +14,32 @@ let clickCounter = 0;
 
 btns.forEach((item) => {
     item.addEventListener('click', (e) => {
-        const timerId = setTimeout(showElement, 300, modal);
+        /* const timerId = setTimeout(showElement, 300, modal); */
+        const timerId = setTimeout(() => {
+            modal.classList.remove('hide');
+        }, 300);
         /* showElement(modal); */
         body.classList.toggle('lock');
     });
 });
 
 close.addEventListener('click', (e) => {
-    const timerId = setTimeout(hideElement, 300, modal);
+    /* const timerId = setTimeout(hideElement, 300, modal); */
+    const timerId = setTimeout(() => {
+        modal.classList.add('hide');
+    }, 300);
     modalForm.reset();
-    /* const timerId2 = setTimeout(modalForm.reset, 300); */
     body.classList.toggle('lock');
 
 });
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        const timerId = setTimeout(hideElement, 300, modal);
+        /* const timerId = setTimeout(hideElement, 300, modal); */
+        const timerId = setTimeout(() => {
+            modal.classList.add('hide');
+        }, 300);
         modalForm.reset();
-        /* const timerId2 = setTimeout(modalForm.reset, 300); */
         body.classList.toggle('lock');
     }
 });
@@ -41,11 +48,15 @@ modal.addEventListener('click', (e) => {
 pricesSwitch.addEventListener('click', (e) => {
     let timerId;
     if (e.target.checked) {
-        /* timerId = setTimeout(showElement, 300, discount); */
-        timerId = setTimeout(RemoveAndAddClass, 300, discount, 'hide', 'makeDisplayInlineBlock');
+        /* timerId = setTimeout(RemoveAndAddClass, 300, discount, 'hide', 'makeDisplayInlineBlock'); */
+        timerId = setTimeout(() => {
+            discount.classList.remove('hide');
+        }, 300);
     } else {
-        /* timerId = setTimeout(hideElement, 300, discount); */
-        timerId = setTimeout(RemoveAndAddClass, 300, discount, 'makeDisplayInlineBlock', 'hide');
+        /* timerId = setTimeout(RemoveAndAddClass, 300, discount, 'makeDisplayInlineBlock', 'hide'); */
+        timerId = setTimeout(() => {
+            discount.classList.add('hide');
+        }, 300);
     }
 });
 
@@ -263,21 +274,6 @@ body.querySelector('.header__list').addEventListener('click', (e) => {
         body.classList.toggle('lock');
     }
 });
-
-/* benefitsSubtitles.forEach((subtitle) => {
-    subtitle.remove();
-});
-body.querySelectorAll('.benefits__item').forEach((item, i) => {
-    item.prepend(benefitsSubtitles[i]);
-}); */
-
-
-/* const benefitsSubtitles = body.querySelectorAll('.benefits__text .benefits__subtitle');
-console.log(benefitsSubtitles);
-benefitsSubtitles.forEach((subtitle) => {
-    subtitle.remove();
-});
-console.log(benefitsSubtitles); */
 
 
 const benefitsItems = body.querySelectorAll('.benefits__item');

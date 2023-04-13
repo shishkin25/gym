@@ -1454,7 +1454,7 @@
         &__package {
             width: 250px;
             &:hover {
-                transform: translateY(-10px);
+                transform: none;
             }
         }
     }
@@ -1549,7 +1549,7 @@
             &-title {
                 font-size: 17px;
             }
-            &-btn {
+            &-sunday {
                 width: 80px;
                 font-size: 10px;
             }
@@ -1590,3 +1590,4 @@
         }
     }
 }
+
