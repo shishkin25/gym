@@ -1,4 +1,4 @@
-function showElement(element) {
+/* function showElement(element) {
     element.classList.remove('hide');
     element.classList.add('makeDisplayBlock');
 }
@@ -11,10 +11,10 @@ function hideElement(element) {
 function RemoveAndAddClass(element, classToRemove, classToAdd) {
     element.classList.remove(classToRemove);
     element.classList.add(classToAdd);
-}
+} */
 
 
-/* как будто бы данные отправляются на сервер */
+/* как будто бы отправка данных */
 function formSubmit (event) {
     event.preventDefault();
     modalForm.reset();

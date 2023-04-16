@@ -1,5 +1,4 @@
 .modal {
-    /* display: none; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -13,7 +12,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 500px;
-        /* margin: 0 auto; */
         background-color: #222224;
         min-height: 250px;
         border-radius: 10px;
@@ -24,7 +22,6 @@
         font-weight: 500;
         font-size: 25px;
         text-align: center;
-        /* color: #000; */
         margin: 0 0 20px 0;
     }
     &__form {
@@ -44,14 +41,8 @@
         position: absolute;
         top: -10px;
         right: 0;
-        /* top: 0;
-        right: 0; */
         font-weight: 700;
         font-size: 30px;
         cursor: pointer;
     }
 }
-
-/* body {
-    overflow: hidden;
-} */

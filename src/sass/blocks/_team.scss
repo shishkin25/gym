@@ -16,88 +16,6 @@
         text-align: center;
         margin: 0 0 50px 0;
     }
-
-   /*  &__coaches {
-        display: grid;
-        justify-content: space-between;
-        grid-template: 541px auto / repeat(3, 400px);
-    }
-
-    &__coach {
-        &-photo {
-            width: 396px;
-            margin: 0 auto;
-            position: relative;
-            .team__coach-img {
-                max-width: 100%;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-        &-link {
-            position: absolute;
-            img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            &:nth-child(3) {
-                top: 0;
-                right: 0;
-            }
-            &:nth-child(4) {
-                top: 60px;
-                right: 0;
-            }
-            &:nth-child(5) {
-                top: 120px;
-                right: 0;
-            }
-        }
-        &-descr {
-            display: flex;
-            justify-content: space-between;
-            padding: 34px 23px;
-            background: #FFFFFF;
-            border-radius: 0px 0px 15px 15px;
-        }
-        &-data {
-            width: 190px;
-            
-        }
-        &-name {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 28px;
-            color: $main-color;
-        }
-        &-position {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: $main-color;
-        }
-        &-icon {
-            width: 60px;
-            height: 60px;
-            img {
-                max-width: 100%;
-            }
-        }
-        &-bg {
-            background: #333335;
-            width: 100%;
-            border-radius: 15px 100px 15px 15px;
-            height: 282px;
-            position: absolute;
-            bottom: 0;
-        }
-    } */
-
-
     &__coaches {
         display: flex;
         justify-content: space-between;
@@ -152,7 +70,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 2;
-                /* padding: 15px; */
                 width: 16px;
                 img {
                     max-width: 100%;
@@ -165,15 +82,6 @@
                     align-items: center;
                 }
             }
-            /* position: relative;
-            img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2; 
-                padding: 15px;
-            } */
             margin: 0 0 10px 0;
         }
 
@@ -195,13 +103,11 @@
         &-name {
             font-weight: 700;
             font-size: 24px;
-            /* line-height: 28px; */
             color: $main-color;
         }
         &-position {
             font-weight: 400;
             font-size: 18px;
-            /* line-height: 30px; */
             color: $main-color;
         }
 
@@ -219,57 +125,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .team__coach-photo {
-    &:nth-child(1) {
-        &:hover .team__coach-bg {
-            background-color: #3C2A2D;
-        }
-        &:hover ~ .team__coach-descr:nth-child(4) {
-            background-color: $main-color;
-        }
-        &:hover ~ .team__coach-descr:nth-child(4) .team__coach-name, 
-        &:hover ~ .team__coach-descr:nth-child(4) .team__coach-position {
-            color: #fff;
-        }
-    }
-    &:nth-child(2) {
-        &:hover .team__coach-bg {
-            background-color: #3C2A2D;
-        }
-        &:hover ~ .team__coach-descr:nth-child(5) {
-            background-color: $main-color;
-        }
-        &:hover ~ .team__coach-descr:nth-child(5) .team__coach-name,
-        &:hover ~ .team__coach-descr:nth-child(5) .team__coach-position {
-            color: #fff;
-        }
-    }
-    &:nth-child(3) {
-        &:hover .team__coach-bg {
-            background-color: #3C2A2D;
-        }
-        &:hover ~ .team__coach-descr:nth-child(6) {
-            background-color: $main-color;
-        }
-        &:hover ~ .team__coach-descr:nth-child(6) .team__coach-name,
-        &:hover ~ .team__coach-descr:nth-child(6) .team__coach-position {
-            color: #fff;
-        }
-    }
-} */

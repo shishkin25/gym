@@ -14,17 +14,14 @@ let clickCounter = 0;
 
 btns.forEach((item) => {
     item.addEventListener('click', (e) => {
-        /* const timerId = setTimeout(showElement, 300, modal); */
         const timerId = setTimeout(() => {
             modal.classList.remove('hide');
         }, 300);
-        /* showElement(modal); */
         body.classList.toggle('lock');
     });
 });
 
 close.addEventListener('click', (e) => {
-    /* const timerId = setTimeout(hideElement, 300, modal); */
     const timerId = setTimeout(() => {
         modal.classList.add('hide');
     }, 300);
@@ -35,7 +32,6 @@ close.addEventListener('click', (e) => {
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        /* const timerId = setTimeout(hideElement, 300, modal); */
         const timerId = setTimeout(() => {
             modal.classList.add('hide');
         }, 300);
@@ -48,69 +44,15 @@ modal.addEventListener('click', (e) => {
 pricesSwitch.addEventListener('click', (e) => {
     let timerId;
     if (e.target.checked) {
-        /* timerId = setTimeout(RemoveAndAddClass, 300, discount, 'hide', 'makeDisplayInlineBlock'); */
         timerId = setTimeout(() => {
             discount.classList.remove('hide');
         }, 300);
     } else {
-        /* timerId = setTimeout(RemoveAndAddClass, 300, discount, 'makeDisplayInlineBlock', 'hide'); */
         timerId = setTimeout(() => {
             discount.classList.add('hide');
         }, 300);
     }
 });
-
-
-
-/* let handler;
-const mouseHandler = (element) => {
-    element.classList.toggle('hide');
-}
-let arrayHandlers = [];
-let hasListener = false;
-if (window.innerWidth > 768) {
-    coaches.forEach((coach, index) => {
-        handler = () => {
-            mouseHandler(links[index])
-        }
-        coach.addEventListener('mouseover', handler);
-        coach.addEventListener('mouseout', handler);
-        arrayHandlers.push(handler);
-    });
-    hasListener = true;
-} else {
-    coaches.forEach((coach, index) => {
-        links[index].classList.remove('hide');
-    });
-    hasListener = false;
-}
-
-window.addEventListener('resize', (e) => {
-    if (window.innerWidth < 768) {
-        if (hasListener){
-            coaches.forEach((coach, index) => {
-                coach.removeEventListener('mouseover', arrayHandlers[index]);
-                coach.removeEventListener('mouseout', arrayHandlers[index]);
-                links[index].classList.remove('hide');
-                hasListener = false;
-            });
-        }
-    } else {
-        if (!hasListener) {
-            arrayHandlers = [];
-            coaches.forEach((coach, index) => {
-                links[index].classList.add('hide');
-                handler = () => {
-                    mouseHandler(links[index])
-                }
-                coach.addEventListener('mouseover', handler);
-                coach.addEventListener('mouseout', handler);
-                arrayHandlers.push(handler);
-            });
-            hasListener = true;
-        }
-    }
-}); */
 
 
 let overHandler;
@@ -154,11 +96,11 @@ window.addEventListener('resize', (e) => {
                 links[index].classList.remove('hide');
                 hasListener = false;
             });
+            arrayMouseOverHandlers = [];
+            arrayMouseOutHandlers = [];
         }
     } else {
         if (!hasListener) {
-            arrayMouseOverHandlers = [];
-            arrayMouseOutHandlers = [];
             coaches.forEach((coach, index) => {
                 links[index].classList.add('hide');
                 overHandler = () => {
@@ -178,9 +120,112 @@ window.addEventListener('resize', (e) => {
 });
 
 
+let arrayMouseDownHandler = [];
+let arrayMouseUpHandler = [];
+let arrayMouseOverHandler = [];
+let arrayMouseOutHandler = [];
+let hasHoverListener = false;
+if (window.innerWidth < 768) {
+    buttonWrapper.forEach((element) => {
+        const arrows = element.querySelectorAll('img');
+        let handler = (e) => {
+            arrows[0].classList.add('hide');
+            arrows[1].classList.remove('hide');
+        };
+        element.addEventListener('mousedown', handler);
+        arrayMouseDownHandler.push(handler);
+
+        handler = (e) => {
+            arrows[0].classList.remove('hide');
+            arrows[1].classList.add('hide');
+        };
+        element.addEventListener('mouseup', handler);
+        arrayMouseUpHandler.push(handler);
+    });  
+} else {
+    buttonWrapper.forEach((element) => {
+        const arrows = element.querySelectorAll('img');
+        let handler = (e) => {
+            arrows[0].classList.add('hide');
+            arrows[1].classList.remove('hide');
+        };
+        element.addEventListener('mouseover', handler);
+        arrayMouseOverHandler.push(handler);
+
+        handler = (e) => {
+            arrows[0].classList.remove('hide');
+            arrows[1].classList.add('hide');
+        };
+        element.addEventListener('mouseout', handler);
+        arrayMouseOutHandler.push(handler);
+    });
+    hasHoverListener = true;
+}
+
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+        if (hasHoverListener) {
+            buttonWrapper.forEach((element, index) => {
+                const arrows = element.querySelectorAll('img');
+                element.removeEventListener('mouseover', arrayMouseOverHandler[index]);
+                element.removeEventListener('mouseout', arrayMouseOutHandler[index]);
+            });
+            arrayMouseOverHandler = [];
+            arrayMouseOutHandler = [];
+
+            buttonWrapper.forEach((element) => {
+                const arrows = element.querySelectorAll('img');
+                let handler = (e) => {
+                    arrows[0].classList.add('hide');
+                    arrows[1].classList.remove('hide');
+                };
+                element.addEventListener('mousedown', handler);
+                arrayMouseDownHandler.push(handler);
+        
+                handler = (e) => {
+                    arrows[0].classList.remove('hide');
+                    arrows[1].classList.add('hide');
+                };
+                element.addEventListener('mouseup', handler);
+                arrayMouseUpHandler.push(handler);
+            });
+            hasHoverListener = false;
+        }
+    } else {
+        if (!hasHoverListener) {
+            buttonWrapper.forEach((element, index) => {
+                const arrows = element.querySelectorAll('img');
+                element.removeEventListener('mousedown', arrayMouseDownHandler[index]);
+                element.removeEventListener('mouseup', arrayMouseUpHandler[index]);
+            });
+            arrayMouseDownHandler = [];
+            arrayMouseUpHandler = [];
+
+            buttonWrapper.forEach((element) => {
+                const arrows = element.querySelectorAll('img');
+                let handler = (e) => {
+                    arrows[0].classList.add('hide');
+                    arrows[1].classList.remove('hide');
+                };
+                element.addEventListener('mouseover', handler);
+                arrayMouseOverHandler.push(handler);
+        
+                handler = (e) => {
+                    arrows[0].classList.remove('hide');
+                    arrows[1].classList.add('hide');
+                };
+                element.addEventListener('mouseout', handler);
+                arrayMouseOutHandler.push(handler);
+            });
+            hasHoverListener = true;
+        }
+    }
+});
+
 
 // заменая белой стрелки на красную при наведении на кнопку
-buttonWrapper.forEach((element) => {
+/* buttonWrapper.forEach((element) => {
     const arrows = element.querySelectorAll('img');
     element.addEventListener('mouseover', (e) => {
         arrows[0].classList.add('hide');
@@ -190,8 +235,7 @@ buttonWrapper.forEach((element) => {
         arrows[0].classList.remove('hide');
         arrows[1].classList.add('hide');
     });
-})
-
+}); */
 
 
 const buttonBack = buttonWrapper[0];
@@ -248,16 +292,6 @@ for (let anchor of anchors) {
 }
 
 
-/* window.addEventListener('resize', (e) => {
-    if (window.innerWidth < 1321) {
-        body.querySelector('.components__text').classList.add('hide');
-        body.querySelector('.components__text-less1320px').classList.remove('hide');
-    } else {
-        body.querySelector('.components__text').classList.remove('hide');
-        body.querySelector('.components__text-less1320px').classList.add('hide');
-    }
-}); */
-
 
 body.querySelector('.header__burger').addEventListener('click', () => {
     body.querySelector('.header__burger').classList.toggle('active');
@@ -278,6 +312,15 @@ body.querySelector('.header__list').addEventListener('click', (e) => {
 
 const benefitsItems = body.querySelectorAll('.benefits__item');
 const benefitsSubtitles = body.querySelectorAll('.benefits__text .benefits__subtitle');
+
+if (window.innerWidth < 481) {
+    benefitsSubtitles.forEach((subtitle) => {
+        subtitle.remove();
+    });
+    benefitsItems.forEach((item, i) => {
+        item.prepend(benefitsSubtitles[i]);
+    });
+}
 window.addEventListener('resize', (e) => {
     if (window.innerWidth < 481) {
         benefitsSubtitles.forEach((subtitle) => {

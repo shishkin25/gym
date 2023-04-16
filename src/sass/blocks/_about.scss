@@ -1,6 +1,5 @@
 .about {
     min-height: 940px;
-    /* background-color: #28282A; */
     background: #28282A url('../img/about.png') 0 183px no-repeat;
     padding: 140px 0 135px 0;
     &__wrapper {
@@ -13,7 +12,6 @@
     &__title {
         font-weight: 700;
         font-size: 46px;
-        /* line-height: 60px; */
         margin: 0 0 20px 0;
     }
     &__descr {

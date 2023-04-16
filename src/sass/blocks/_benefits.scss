@@ -8,24 +8,20 @@
     }
     &__left {
         padding: 81px 0 0 0;
-        /* width: 570px; */
     }
     &__title {
         font-weight: 700;
         font-size: 46px;
         margin: 0 0 20px 0;
-        /* line-height: 60px; */
     }
     &__description {
         font-weight: 400;
         font-size: 18px;
         margin: 0 0 50px 0;
         width: 467px;
-        /* line-height: 30px; */
     }
     &__item {
         display: flex;
-        /* justify-content: space-between; */
         align-items: center;
         margin: 0 0 55px 0;
     }
@@ -48,7 +44,6 @@
     &__subtitle {
         font-weight: 700;
         font-size: 24px;
-        /* line-height: 28px; */
     }
     &__descr {
         font-weight: 400;
@@ -66,7 +61,6 @@
     }
     &__img {
         width: 350px;
-        /* height: 370px; */
         img {
             max-width: 100%;
         }
@@ -88,7 +82,7 @@
         &:nth-child(4) {
             position: absolute;
             top: 348px;
-            left: 312px;
+            left: 320px;
         }
     }
 }

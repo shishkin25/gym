@@ -9,10 +9,8 @@
     &__items {
         display: flex; 
         justify-content: space-between;
-        /* border: 1px dashed #000; */
         .item {
             width: 246px;
-            /* flex: 0 1 246px; */
             text-align: center;
             &__logo {
                 width: 60px;
@@ -39,7 +37,6 @@
         }
     }
     &__text, &__text-less1320px {
-        /* border: 1px dashed #000; */
         padding: 0 0 0 67px;
         position: relative;
         &::before {
@@ -53,7 +50,6 @@
             border: 1px solid #3D3D40;
         }
         .info {
-            /* min-width: 260px; */
             &__title {
                 width: 329px;
                 font-weight: 700;
@@ -77,11 +73,9 @@
             content: '';
             position: absolute;
             height: 1px;
-            /* width: 507px; */
             width: 100%;
             background-color: #000;
             top: 0;
-            /* left: -40px; */
             left: 0;
             border: 1px solid #3D3D40;
         }

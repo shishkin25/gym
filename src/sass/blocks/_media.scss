@@ -24,9 +24,9 @@
 }
 
 @media (max-width: 1320px) {
-    .container {
+    /* .container {
         padding: 0 35px;
-    }
+    } */
     .tagline {
         &__bigtext {
             font-size: 65px;
@@ -77,6 +77,9 @@
         }
         &__right {
             width: 500px;
+        }
+        &__orange {
+            width: 137px;
         }
     }
     .join {
@@ -229,9 +232,6 @@
             width: 355px;
             font-size: 14px;
         }
-       /*  &__item {
-            width: 370px;
-        } */
         &__text {
             width: 290px;
         }
@@ -273,6 +273,9 @@
         }
         &__right {
             width: 450px;
+        }
+        &__orange {
+            width: 125px;
         }
     }
     .join {
@@ -540,24 +543,6 @@
         &__descr {
             font-size: 13px;
         }
-        /* &__right {
-            width: 410px;
-        }
-        &__img {
-            width: 210px;
-            &:nth-child(2) {
-                top: 42px;
-                left: 200px;
-            }
-            &:nth-child(3) {
-                top: 215px;
-                left: 10px;
-            }
-            &:nth-child(4) {
-                top: 240px;
-                left: 200px;
-            }
-        } */
         &__right {
             width: 403px;
         }
@@ -780,10 +765,8 @@
             top: -800px;
             left: 0;
             width: 100%;
-            /* min-height: 400px; */
             height: 100%;
             background-color: #222224;
-            /* padding: 20px 0; */
             padding: 100px 0 0 0;
             opacity: 0.98;
             transition: all 0.3s ease 0s;
@@ -848,6 +831,12 @@
             margin: 0 0 30px 0;
             a {
                 font-size: 27px;
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $main-color;
+                }
             }
         }
     }
@@ -964,7 +953,6 @@
             &:last-child {
                 margin: 0;
             }
-            /* min-height: auto; */
             .package {
                 &__name {
                     margin: 0 0 15px 0;
@@ -1031,19 +1019,6 @@
             &:hover .team__coach-name, &:hover .team__coach-position {
                 color: $main-color;
             }
-
-            /* &:active {
-                transform: translateY(-25px);
-            }
-            &:active .team__coach-bg {
-                background-color: #3C2A2D;
-            }
-            &:active .team__coach-descr {
-                background-color: $main-color;
-            }
-            &:active .team__coach-name, &:active .team__coach-position {
-                color: #fff;
-            } */
         }
         
         
@@ -1068,6 +1043,20 @@
         .choosen-client {
             width: 215px;
             height: 215px;
+        }
+        &__info {
+            .client {
+                &__slider {
+                    .button__wrapper {
+                        &:hover {
+                            background-color: #28282A;
+                        }
+                        &:active {
+                            background-color: #fff;
+                        }
+                    }       
+                }
+            }
         }
     }
 
@@ -1181,6 +1170,9 @@
         &__graphic {
             width: 60px;
         }
+        &__orange {
+            width: 105px;
+        }
     }
     .join {
         &__question {
@@ -1260,11 +1252,10 @@
         }
         &__contacts {
             width: 100%;
-            margin: 0 0 40px 0;
+            margin: 0 0 45px 0;
             position: relative;
             &-logo {
                 display: block;
-                /* margin: 0 auto 20px auto; */
                 margin: 0;
                 position: absolute;
                 top: 0;
@@ -1272,7 +1263,6 @@
             }
             &-descr {
                 width: 270px;
-                /* margin: 0 auto 40px auto; */
                 margin: 0;
                 text-align: end;
                 position: absolute;
@@ -1281,12 +1271,11 @@
             }
             &-items {
                 flex-direction: row;
-                margin: 115px 0 0 0;
+                margin: 120px 0 0 0;
             }
             &-item {
                 margin: 0;
                 flex-direction: column;
-                /* width: 33.333%; */
                 width: 30%;
                 &:nth-child(2) {
                     width: 40%;
@@ -1374,6 +1363,9 @@
         &__month {
             font-size: 14px;
         }
+        &__orange {
+            width: 90px;
+        }
     }
 
     .join {
@@ -1403,7 +1395,6 @@
         }
         &__text {
             padding: 0;
-            /* width: 90px; */
             width: auto;
         }
     }
@@ -1412,7 +1403,7 @@
             font-size: 25px;
         }
         &__description {
-            width: 100%;
+            width: 245px;
             font-size: 13px;
         }
         &__item {
@@ -1427,6 +1418,7 @@
         &__subtitle {
             text-align: center;
             font-size: 17px;
+            width: 180px;
         }
         &__subtitle, &__icon {
             margin: 0 0 12px 0;
@@ -1587,6 +1579,9 @@
     .about {
         &__graphic {
             width: 28px;
+        }
+        &__orange {
+            width: 75px;
         }
     }
 }
