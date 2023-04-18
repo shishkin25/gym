@@ -506,12 +506,12 @@
                     </div>
                     <div class="client__slider button">
                         <button class="button__wrapper">
-                            <img src="icons/back_white.svg" alt="back">
-                            <img src="icons/back_red.svg" alt="back" class="hide">
+                            <img src="icons/back_white.svg" alt="back" onselectstart="return false;">
+                            <img src="icons/back_red.svg" alt="back" class="hide" onselectstart="return false;">
                         </button>
                         <button class="button__wrapper">
-                            <img src="icons/forward_white.svg" alt="forward">
-                            <img src="icons/forward_red.svg" alt="forward" class="hide">
+                            <img src="icons/forward_white.svg" alt="forward" onselectstart="return false;">
+                            <img src="icons/forward_red.svg" alt="forward" class="hide" onselectstart="return false;">
                         </button>
                     </div>
                 </div>
@@ -698,13 +698,25 @@
 
     <div class="modal hide">
         <div class="modal__content">
-            <div class="modal__close">&times;</div>
+            <!-- <div class="modal__close">&times;</div>
             <div class="modal__title">We will get back to you as soon as possible!</div>
             <form action="" class="modal__form">
                 <input class="modal__form-input" name="name" type="text" placeholder="Your name" required>
                 <input class="modal__form-input" name="telephone" type="tel" placeholder="Your phone number" required>
                 <button class="modal__form-btn btn">Call me back</button>
-            </form>
+            </form> -->
+            <div class="modal__wrapper">
+                <div class="modal__close">&times;</div>
+                <div class="modal__title">We will get back to you as soon as possible!</div>
+                <form action="" class="modal__form">
+                    <input class="modal__form-input" name="name" type="text" placeholder="Your name" required>
+                    <input class="modal__form-input" name="telephone" type="tel" placeholder="Your phone number" required>
+                    <button class="modal__form-btn btn">Call me back</button>
+                </form>
+            </div>
+            <div class="modal__message hide">
+                Your application has been successfully sent!
+            </div>
         </div>
     </div>
 

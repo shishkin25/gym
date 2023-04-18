@@ -197,7 +197,7 @@
         }
     }
     .tagline {
-        background: url('../img/man.png') -635px 0 no-repeat;
+        /* background: url('../img/man.png') -635px 0 no-repeat; */
         &__bigtext {
             width: 600px;
             font-size: 60px;
@@ -448,7 +448,7 @@
         }
     }
     .tagline {
-        background: url('../img/man.png') -810px 0 no-repeat;
+        /* background: url('../img/man.png') -810px 0 no-repeat; */
         &__bigtext {
             width: 400px;
             font-size: 45px;
@@ -761,11 +761,13 @@
         &__list {
             display: block;
             overflow: auto;
-            position: fixed;
-            top: -800px;
+            /* position: fixed; */
+            position: absolute;
+            top: -1000px;
             left: 0;
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
+            height: 500px;
             background-color: #222224;
             padding: 100px 0 0 0;
             opacity: 0.98;
@@ -842,7 +844,7 @@
     }
 
     .tagline {
-        background: url(../img/man.png) -920px 0 no-repeat;
+        /* background: url(../img/man.png) -920px 0 no-repeat; */
         &__bigtext {
             width: 360px;
             font-size: 35px;
@@ -1047,13 +1049,18 @@
         &__info {
             .client {
                 &__slider {
+                    /* не было */
+                    width: 252px;
+                    height: 100px;
                     .button__wrapper {
+                        /* не было */
+                        width: 123px;
                         &:hover {
                             background-color: #28282A;
                         }
-                        &:active {
+                        /* &:active {
                             background-color: #fff;
-                        }
+                        } */
                     }       
                 }
             }
@@ -1086,7 +1093,7 @@
 
 @media (max-width: 576px) {
     .tagline {
-        background: url(../img/man.png) -1000px 0 no-repeat;
+        /* background: url(../img/man.png) -1000px 0 no-repeat; */
         &__bigtext {
             width: 280px;
             font-size: 30px;
@@ -1318,7 +1325,7 @@
         }
     }
     .tagline {
-        background: url(../img/man.png) -1155px 0 no-repeat;
+        /* background: url(../img/man.png) -1155px 0 no-repeat; */
         &__bigtext {
             width: 200px;
             font-size: 28px;
@@ -1436,7 +1443,7 @@
             flex-direction: column;
             width: 210px;
             transform: translateX(0);
-            align-items: end;
+            align-items: flex-end;
             min-height: 70px;
             margin: 0 auto 30px auto;
         }

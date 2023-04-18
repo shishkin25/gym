@@ -15,12 +15,28 @@ function RemoveAndAddClass(element, classToRemove, classToAdd) {
 
 
 /* как будто бы отправка данных */
-function formSubmit (event) {
+function formSubmit (event, modalIsOpen) {
     event.preventDefault();
-    modalForm.reset();
-    const timerId = setTimeout(hideElement, 250, modal);
-    body.classList.toggle('lock');
-    const timerId2 = setTimeout(alert, 300, 'Ваша заявка отправлена!');
+    modalWrapper.classList.add('hide');
+    modalMessage.classList.remove('hide');
+
+    setTimeout(() => {
+            if (modalIsOpen.value) {
+                modalWrapper.classList.remove('hide');
+                modalMessage.classList.add('hide');
+                modal.classList.add('hide');
+                body.classList.toggle('lock');
+                modalForm.reset();
+            }
+    }, 2000);
+}
+
+function clickInButtonArea(event) {
+    const touch = event.touches[0];
+    const x = touch.clientX;
+    const y = touch.clientY;
+    const rect = event.target.getBoundingClientRect();
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
 }
 
 

@@ -10,7 +10,10 @@ const links = body.querySelectorAll('.team__coach-links');
 const buttonWrapper = body.querySelectorAll('.button__wrapper');
 const clients = body.querySelectorAll('.clients__images-wrapper');
 const contacts = body.querySelectorAll('.client__contacts');
+const modalWrapper = body.querySelector('.modal__wrapper');
+const modalMessage = body.querySelector('.modal__message');
 let clickCounter = 0;
+const modalIsOpen = { value: false };
 
 btns.forEach((item) => {
     item.addEventListener('click', (e) => {
@@ -18,28 +21,33 @@ btns.forEach((item) => {
             modal.classList.remove('hide');
         }, 300);
         body.classList.toggle('lock');
+        modalIsOpen.value = true;
     });
 });
 
 close.addEventListener('click', (e) => {
     const timerId = setTimeout(() => {
+        modalWrapper.classList.remove('hide');
+        modalMessage.classList.add('hide');
         modal.classList.add('hide');
     }, 300);
     modalForm.reset();
     body.classList.toggle('lock');
-
+    modalIsOpen.value = false;
 });
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         const timerId = setTimeout(() => {
+            modalWrapper.classList.remove('hide');
+            modalMessage.classList.add('hide');
             modal.classList.add('hide');
         }, 300);
         modalForm.reset();
         body.classList.toggle('lock');
+        modalIsOpen.value = false;
     }
 });
-
 
 pricesSwitch.addEventListener('click', (e) => {
     let timerId;
@@ -120,6 +128,7 @@ window.addEventListener('resize', (e) => {
 });
 
 
+let wasClick = false;
 let arrayMouseDownHandler = [];
 let arrayMouseUpHandler = [];
 let arrayMouseOverHandler = [];
@@ -128,18 +137,23 @@ let hasHoverListener = false;
 if (window.innerWidth < 768) {
     buttonWrapper.forEach((element) => {
         const arrows = element.querySelectorAll('img');
-        let handler = (e) => {
-            arrows[0].classList.add('hide');
-            arrows[1].classList.remove('hide');
-        };
-        element.addEventListener('mousedown', handler);
-        arrayMouseDownHandler.push(handler);
 
-        handler = (e) => {
+        let handler = (event) => {
+            wasClick = clickInButtonArea(event);
+            if (wasClick) {
+                arrows[0].classList.add('hide');
+                arrows[1].classList.remove('hide');
+                element.style.backgroundColor = '#fff';
+            }
+        };
+        element.addEventListener('touchstart', handler);
+        arrayMouseDownHandler.push(handler);
+        handler = (event) => {
             arrows[0].classList.remove('hide');
             arrows[1].classList.add('hide');
+            element.style.backgroundColor = '#28282A';
         };
-        element.addEventListener('mouseup', handler);
+        element.addEventListener('touchend', handler);
         arrayMouseUpHandler.push(handler);
     });  
 } else {
@@ -148,6 +162,7 @@ if (window.innerWidth < 768) {
         let handler = (e) => {
             arrows[0].classList.add('hide');
             arrows[1].classList.remove('hide');
+            element.style.backgroundColor = '#fff';
         };
         element.addEventListener('mouseover', handler);
         arrayMouseOverHandler.push(handler);
@@ -155,6 +170,7 @@ if (window.innerWidth < 768) {
         handler = (e) => {
             arrows[0].classList.remove('hide');
             arrows[1].classList.add('hide');
+            element.style.backgroundColor = '#28282A';
         };
         element.addEventListener('mouseout', handler);
         arrayMouseOutHandler.push(handler);
@@ -176,18 +192,23 @@ window.addEventListener('resize', () => {
 
             buttonWrapper.forEach((element) => {
                 const arrows = element.querySelectorAll('img');
-                let handler = (e) => {
-                    arrows[0].classList.add('hide');
-                    arrows[1].classList.remove('hide');
+                let handler = (event) => {
+                    wasClick = clickInButtonArea(event);
+                    if (wasClick) {
+                        arrows[0].classList.add('hide');
+                        arrows[1].classList.remove('hide');
+                        element.style.backgroundColor = '#fff';
+                    }
                 };
-                element.addEventListener('mousedown', handler);
+                element.addEventListener('touchstart', handler);
                 arrayMouseDownHandler.push(handler);
         
-                handler = (e) => {
+                handler = (event) => {
                     arrows[0].classList.remove('hide');
                     arrows[1].classList.add('hide');
+                    element.style.backgroundColor = '#28282A';
                 };
-                element.addEventListener('mouseup', handler);
+                element.addEventListener('touchend', handler);
                 arrayMouseUpHandler.push(handler);
             });
             hasHoverListener = false;
@@ -196,8 +217,8 @@ window.addEventListener('resize', () => {
         if (!hasHoverListener) {
             buttonWrapper.forEach((element, index) => {
                 const arrows = element.querySelectorAll('img');
-                element.removeEventListener('mousedown', arrayMouseDownHandler[index]);
-                element.removeEventListener('mouseup', arrayMouseUpHandler[index]);
+                element.removeEventListener('touchstart', arrayMouseDownHandler[index]);
+                element.removeEventListener('touchend', arrayMouseUpHandler[index]);
             });
             arrayMouseDownHandler = [];
             arrayMouseUpHandler = [];
@@ -207,6 +228,7 @@ window.addEventListener('resize', () => {
                 let handler = (e) => {
                     arrows[0].classList.add('hide');
                     arrows[1].classList.remove('hide');
+                    element.style.backgroundColor = '#fff';
                 };
                 element.addEventListener('mouseover', handler);
                 arrayMouseOverHandler.push(handler);
@@ -214,6 +236,7 @@ window.addEventListener('resize', () => {
                 handler = (e) => {
                     arrows[0].classList.remove('hide');
                     arrows[1].classList.add('hide');
+                    element.style.backgroundColor = '#28282A';
                 };
                 element.addEventListener('mouseout', handler);
                 arrayMouseOutHandler.push(handler);
@@ -242,27 +265,32 @@ const buttonBack = buttonWrapper[0];
 const buttonForward = buttonWrapper[1];
 buttonWrapper.forEach((currentButton) => {
     currentButton.addEventListener('click', (e) => {
-        const timerId = setTimeout(() => {
-            clients[clickCounter].classList.remove('choosen-client');
-            contacts[clickCounter].classList.add('hide');
-            if (currentButton === buttonBack) {
-                if (clickCounter == 0) {
-                    clickCounter = 3;
-                } else {
-                    clickCounter--;
+        if (window.innerWidth > 767) {
+            wasClick = true;
+        }
+        if (wasClick) {
+            const timerId = setTimeout(() => {
+                clients[clickCounter].classList.remove('choosen-client');
+                contacts[clickCounter].classList.add('hide');
+                if (currentButton === buttonBack) {
+                    if (clickCounter == 0) {
+                        clickCounter = 3;
+                    } else {
+                        clickCounter--;
+                    }
                 }
-            }
-            
-            if (currentButton === buttonForward) {
-                if (clickCounter == 3) {
-                    clickCounter = 0;
-                } else {
-                    clickCounter++;
-                }
-            }        
-            clients[clickCounter].classList.add('choosen-client');
-            contacts[clickCounter].classList.remove('hide');
-        }, 180);
+                
+                if (currentButton === buttonForward) {
+                    if (clickCounter == 3) {
+                        clickCounter = 0;
+                    } else {
+                        clickCounter++;
+                    }
+                }        
+                clients[clickCounter].classList.add('choosen-client');
+                contacts[clickCounter].classList.remove('hide');
+            }, 180);
+        }
     });
 });
 
@@ -296,6 +324,10 @@ for (let anchor of anchors) {
 body.querySelector('.header__burger').addEventListener('click', () => {
     body.querySelector('.header__burger').classList.toggle('active');
     body.querySelector('.header__list').classList.toggle('active');
+    /* нужно ли? */
+    body.querySelector('.header__list').style.height = `${document.documentElement.clientHeight}px`;
+    /* console.log(document.documentElement.clientHeight);
+    console.log(body.querySelector('.header__list')); */
     body.classList.toggle('lock');
 });
 
@@ -339,4 +371,6 @@ window.addEventListener('resize', (e) => {
 });
 
 
-modalForm.addEventListener('submit', formSubmit);
+modalForm.addEventListener('submit', (event) => {
+    formSubmit(event, modalIsOpen);
+});
