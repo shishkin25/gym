@@ -12,16 +12,20 @@ const clients = body.querySelectorAll('.clients__images-wrapper');
 const contacts = body.querySelectorAll('.client__contacts');
 const modalWrapper = body.querySelector('.modal__wrapper');
 const modalMessage = body.querySelector('.modal__message');
+const burger = body.querySelector('.header__burger');
 let clickCounter = 0;
+let burgerIsActive = false;
 const modalIsOpen = { value: false };
 
 btns.forEach((item) => {
     item.addEventListener('click', (e) => {
-        const timerId = setTimeout(() => {
-            modal.classList.remove('hide');
-        }, 300);
-        body.classList.toggle('lock');
-        modalIsOpen.value = true;
+        if (!burger.classList.contains('active')) {
+            const timerId = setTimeout(() => {
+                modal.classList.remove('hide');
+            }, 300);
+            body.classList.toggle('lock');
+            modalIsOpen.value = true;
+        }
     });
 });
 
@@ -269,27 +273,25 @@ buttonWrapper.forEach((currentButton) => {
             wasClick = true;
         }
         if (wasClick) {
-            const timerId = setTimeout(() => {
-                clients[clickCounter].classList.remove('choosen-client');
-                contacts[clickCounter].classList.add('hide');
-                if (currentButton === buttonBack) {
-                    if (clickCounter == 0) {
-                        clickCounter = 3;
-                    } else {
-                        clickCounter--;
-                    }
+            clients[clickCounter].classList.remove('choosen-client');
+            contacts[clickCounter].classList.add('hide');
+            if (currentButton === buttonBack) {
+                if (clickCounter == 0) {
+                    clickCounter = 3;
+                } else {
+                    clickCounter--;
                 }
-                
-                if (currentButton === buttonForward) {
-                    if (clickCounter == 3) {
-                        clickCounter = 0;
-                    } else {
-                        clickCounter++;
-                    }
-                }        
-                clients[clickCounter].classList.add('choosen-client');
-                contacts[clickCounter].classList.remove('hide');
-            }, 180);
+            }
+            
+            if (currentButton === buttonForward) {
+                if (clickCounter == 3) {
+                    clickCounter = 0;
+                } else {
+                    clickCounter++;
+                }
+            }        
+            clients[clickCounter].classList.add('choosen-client');
+            contacts[clickCounter].classList.remove('hide');
         }
     });
 });
@@ -324,20 +326,42 @@ for (let anchor of anchors) {
 body.querySelector('.header__burger').addEventListener('click', () => {
     body.querySelector('.header__burger').classList.toggle('active');
     body.querySelector('.header__list').classList.toggle('active');
-    /* нужно ли? */
-    body.querySelector('.header__list').style.height = `${document.documentElement.clientHeight}px`;
+    body.classList.toggle('lock');
+    burgerIsActive = !burgerIsActive;
+    if (burgerIsActive) {
+        body.querySelector('.header__list').style.height = document.documentElement.clientHeight < 650 ? '650px' : `${document.documentElement.clientHeight}px`;
+    } else {
+        body.querySelector('.header__list').style.height = 'unset';
+    }
     /* console.log(document.documentElement.clientHeight);
     console.log(body.querySelector('.header__list')); */
-    body.classList.toggle('lock');
+});
+
+window.addEventListener('resize', (e) => {
+    if (window.innerWidth > 768) {
+        if (burgerIsActive) {
+            body.querySelector('.header__burger').classList.toggle('active');
+            body.querySelector('.header__list').classList.toggle('active');
+            body.classList.toggle('lock');
+            body.querySelector('.header__list').style.height = 'unset';
+            burgerIsActive = false;
+        }
+        /* body.querySelector('.header__list').style.height = 'unset';
+        if (burgerIsActive) {
+            body.classList.toggle('lock');
+        } */
+    }
 });
 
 /* в случае когда мы переходим по ссылке (из бургера) к выбранной секции нужно сделать так, чтобы само меню бургер пропадало,
  как при нажатии на крестик. Данный код именно это и делает */
 body.querySelector('.header__list').addEventListener('click', (e) => {
-    if (e.target.tagName == "A" && window.innerWidth <= 767) {
+    if (e.target.tagName == "A" && window.innerWidth < 768) {
         body.querySelector('.header__burger').classList.toggle('active');
         body.querySelector('.header__list').classList.toggle('active');
-        body.classList.toggle('lock');
+        body.classList.toggle('lock'); 
+        burgerIsActive = false;
+        body.querySelector('.header__list').style.height = 'unset';
     }
 });
 
