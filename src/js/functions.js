@@ -1,25 +1,49 @@
-/* function showElement(element) {
-    element.classList.remove('hide');
-    element.classList.add('makeDisplayBlock');
+function closeModal() {
+    setTimeout(() => {
+        /* условие для случая, когда мы закрываем модальное окно после того, как была нажата кнопка submit */
+        if (modalWrapper.classList.contains('hide')) {
+            modalWrapper.classList.remove('hide');
+            modalMessage.classList.add('hide');
+        }
+        modal.classList.add('hide');
+    }, 300);
+    modalForm.reset();
+    body.classList.toggle('lock');
+    modalIsOpen.value = false;
 }
 
-function hideElement(element) {
-    element.classList.remove('makeDisplayBlock');
-    element.classList.add('hide');
+function animationWithArrowsAndBg(button, arrowToHide, arrowToShow, bg) {
+    arrowToHide.classList.add('hide');
+    arrowToShow.classList.remove('hide');
+    button.style.backgroundColor = bg;
 }
 
-function RemoveAndAddClass(element, classToRemove, classToAdd) {
-    element.classList.remove(classToRemove);
-    element.classList.add(classToAdd);
-} */
-
+function switchToNewClient(currentButton) {
+    clients[clickCounter].classList.remove('choosen-client');
+    contacts[clickCounter].classList.add('hide');
+    if (currentButton === buttonBack) {
+        if (clickCounter == 0) {
+            clickCounter = 3;
+        } else {
+            clickCounter--;
+        }
+    }
+    if (currentButton === buttonForward) {
+        if (clickCounter == 3) {
+            clickCounter = 0;
+        } else {
+            clickCounter++;
+        }
+    }        
+    clients[clickCounter].classList.add('choosen-client');
+    contacts[clickCounter].classList.remove('hide');
+}
 
 /* как будто бы отправка данных */
 function formSubmit (event, modalIsOpen) {
     event.preventDefault();
     modalWrapper.classList.add('hide');
     modalMessage.classList.remove('hide');
-
     setTimeout(() => {
             if (modalIsOpen.value) {
                 modalWrapper.classList.remove('hide');
