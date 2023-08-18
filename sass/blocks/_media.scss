@@ -1,0 +1,1591 @@
+@media (max-width: 1820px) {
+    .about {
+        background: #28282A;
+        &__black {
+            display: none;
+        }
+    }
+    .clients {
+        background: #222224;
+    }
+}
+
+@media (max-width: 1461px) {
+    .prices {
+        &__gray-circles {
+            &_right {
+                right: 0;
+            }
+            &_left {
+                left: 0;
+            }
+        }
+        &__package {
+            width: 410px;
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .tagline {
+        &__bigtext {
+            font-size: 65px;
+        }
+        &__smalltext {
+            width: 660px;
+        }
+    }
+    .components {
+        &__content {
+            display: block;
+            margin: 0 0 50px 0;
+        }
+        &__items {
+            width: 100%;
+            justify-content: space-around;
+            .item {
+                width: 250px;
+            }
+        }  
+        &__text {
+            display: none;
+        } 
+        &__text-less1320px {
+            display: block;
+            .info {
+                &__title {
+                    font-size: 40px;
+                    text-align: center;
+                    width: 100%;
+                }
+                &__descr {
+                    text-align: center;
+                }
+            }
+            
+        }
+    }
+    .about {
+        &__title {
+            font-size: 42px;
+        }
+        &__descr {
+            font-size: 16px;
+        }
+        &__left {
+            width: 450px;
+        }
+        &__right {
+            width: 500px;
+        }
+        &__orange {
+            width: 137px;
+        }
+    }
+    .join {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__question {
+            margin: 0 0 70px 0;
+        }
+        &__reasons {
+            padding: 0;
+        }
+    }
+    .benefits {
+        &__title {
+            font-size: 36px;
+        }
+        &__description {
+            font-size: 16px;
+        }
+        &__item {
+            justify-content: start;
+            align-items: center;
+        }
+        &__text {
+            width: 390px;
+            padding: 0 0 0 30px;
+        }
+        &__right {
+            width: 630px;
+        }
+        &__img {
+            &:nth-child(2) {
+                top: 82px;
+                left: 275px;
+            }
+            &:nth-child(4) {
+                top: 362px;
+                left: 275px;
+            }
+        }
+    }
+    .prices {
+        &__title {
+            font-size: 45px;
+        }
+        &__descr {
+            font-size: 16px;
+        }
+        &__package {
+            width: 360px;
+        }
+
+        .package {
+            &__price {
+                &_new {
+                    font-size: 58px;
+                }
+            }
+        }
+    }
+    .team {
+        min-height: 1018px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 818px no-repeat;
+        &__title {
+            font-size: 54px;
+        }
+        &__text {
+            font-size: 17px;
+        }
+        &__coach {
+            width: 360px;
+            &-photo {
+                margin: 0 auto;
+            }
+            &:nth-child(1) {
+                .team__coach-photo {
+                    width: 275px;
+                }
+            }
+            &:nth-child(2) {
+                .team__coach-photo {
+                    width: 335px;
+                }
+            }
+            &:nth-child(3) {
+                .team__coach-photo {
+                    width: 355px;
+                }
+            }
+        }
+    }
+    .clients {
+        &__images-decoration {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__item {
+            margin: 0 27px 0 0;
+            &:last-child {
+                margin: 0 53px 0 0;
+            }
+            a {
+                font-size: 17px;
+            }
+        }
+        &__btn {
+            flex: 0 0 140px;
+            font-size: 17px;
+        }
+    }
+    .tagline {
+        background: url('../img/man.png') -635px 0 no-repeat;
+        &__bigtext {
+            width: 600px;
+            font-size: 60px;
+        }
+        &__smalltext {
+            width: 550px;
+            font-size: 17px;
+        }
+    }
+    .components {
+        &__items {
+            .item {
+                width: 240px;
+            }
+        }
+        .info {
+            width: 385px;
+            &__title {
+                font-size: 37px;
+                margin: 0 0 10px 0;
+            }
+            &__descr {
+                font-size: 16px;
+            }
+        }
+    }
+    .benefits {
+        &__title {
+            font-size: 32px;
+        }
+        &__description {
+            width: 355px;
+            font-size: 14px;
+        }
+        &__text {
+            width: 290px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__descr {
+            font-size: 14px;
+        }
+        &__right {
+            width: 505px;
+            margin: 82px 0 0 0;
+        }
+        &__img {
+            width: 260px;
+            &:nth-child(2) {
+                top: 42px;
+                left: 245px;
+            }
+            &:nth-child(3) {
+                top: 220px;
+                left: 0;
+            }
+            &:nth-child(4) {
+                top: 285px;
+                left: 238px;
+            }
+        }
+    }
+    .about {
+        &__title {
+            font-size: 39px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+        &__left {
+            width: 425px;
+        }
+        &__right {
+            width: 450px;
+        }
+        &__orange {
+            width: 125px;
+        }
+    }
+    .join {
+        &__subtitle {
+            font-size: 42px;
+        }
+        &__text {
+            font-size: 22px;
+        }
+    }
+    .prices {
+        &__title {
+            width: 421px;
+            font-size: 42px;
+        }
+        &__descr {
+            font-size: 14px;
+            width: 380px;
+        }
+        &__duration {
+            font-size: 15px;
+        }
+        .package {
+            &__name {
+                font-size: 20px;
+            }   
+            &__price {
+                &_new {
+                    font-size: 50px;
+                }
+            }
+            &__elements {
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
+        &__package {
+            width: 300px;
+        }
+    }
+    .team {
+        min-height: 955px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 752px no-repeat;
+        &__title {
+            font-size: 50px;
+        }
+        &__text {
+            font-size: 17px;
+        }
+        &__coach {
+            width: 300px;
+            &-name {
+                font-size: 19px;
+            }
+            &-position {
+                font-size: 17px;
+            }
+            &-icon {
+                width: 55px;
+            }
+            &-bg {
+                height: 235px;
+            }
+            &-link {
+                width: 40px;
+                height: 40px;
+            }
+            &-descr {
+                min-height: 138px;
+            }
+            &-data {
+                width: 153px;
+            }
+            &-photo {
+                margin: 0 auto;
+            }
+            &:nth-child(1) {
+                .team__coach-photo {
+                    width: 236px;
+                }
+            }
+            &:nth-child(2) {
+                .team__coach-photo {
+                    width: 285px;
+                }
+            }
+            &:nth-child(3) {
+                .team__coach-photo {
+                    width: 300px;
+                }
+            }
+        }
+        
+    }
+    .clients {
+        &__title {
+            font-size: 50px;
+        }
+        &__subtitle {
+            font-size: 17px;
+        }
+        &__info {
+            width: 390px;
+        }
+        &__images {
+            width: 480px;
+        }
+        &__images-wrapper {
+            width: 170px;
+            height: 170px;
+        }
+        .choosen-client {
+            width: 235px;
+            height: 235px;
+        }
+    }
+    .features {
+        &__wrapper {
+            grid-template: minmax(70px,auto)/1fr minmax(30px,248px) 1fr minmax(30px,248px) 1fr;
+        }
+    }
+    .footer {
+        &__contacts {
+            width: 250px;
+            &-descr {
+                font-size: 14px;
+            }
+            &-text {
+                font-size: 14px;
+            }
+
+        }
+        &__services, &__corporate {
+            width: 140px;
+            &-title {
+                font-size: 20px;
+            }
+            &-items {
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
+        &__timetable {
+            width: 290px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        &__logo {
+            width: 80px;
+        
+        }
+        &__btn {
+            flex: 0 0 115px;
+            min-height: 40px;
+            font-size: 15px;
+        }
+        &__item {
+            margin: 0 15px 0 0;
+            a {
+                font-size: 15px;
+            }
+            &:last-child {
+                margin: 0 28px 0 0;
+            }
+        }
+    }
+    .tagline {
+        background: url('../img/man.png') -810px 0 no-repeat;
+        &__bigtext {
+            width: 400px;
+            font-size: 45px;
+        }
+        &__smalltext {
+            width: 315px;
+            font-size: 15px;
+        }
+        &__btn {
+            width: 170px;
+            font-size: 16px;
+        }
+    }
+
+
+    .components {
+        &__items {
+            .item {
+                width: 210px;
+                &__logo {
+                    width: 50px;
+                    height: 50px;
+                }
+                &__title {
+                    font-size: 18px;
+                }
+                &__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    
+    .about {
+        &__title {
+            text-align: center;
+        }
+        &__descr {
+            text-align: center;
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+        &__left {
+            margin: 0 0 70px 0;
+        }
+    }
+
+    .join {
+        &__reasons {
+            grid-template: repeat(3, auto) / repeat(2, 217px);
+            justify-content: center;
+            column-gap: 35px;
+        }
+        &__subtitle {
+            font-size: 38px;
+        }
+        &__btn {
+            font-size: 17px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+
+    .benefits {
+        &__title {
+            font-size: 28px;
+        }
+        &__description {
+            width: 275px;
+            font-size: 13px;
+        }
+        &__icon {
+            width: 65px;
+            height: 65px;
+            .img-wrapper {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__text {
+            width: 225px;
+            padding: 0 0 0 17px;
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+        &__right {
+            width: 403px;
+        }
+        &__img {
+            width: 240px;
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            &:nth-child(2) {
+                top: 120px;
+                left: 168px;
+            }
+            &:nth-child(3) {
+                top: 248px;
+                left: -5px;
+            }
+            &:nth-child(4) {
+                top: 366px;
+                left: 168px;
+            }
+        }
+    }
+
+    .prices {
+        &__title {
+            font-size: 38px;
+        }
+        &__package {
+            width: 228px;
+        }
+        .package {
+            &__name {
+                font-size: 18px;
+            }
+            &__price {
+                &_new {
+                    font-size: 40px;
+                }
+            }
+            &__elements {
+                li {
+                    font-size: 13px;
+                }
+            }
+            &__btn {
+                width: 130px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+            }
+        }
+        &__gray-circles {
+            &_right, &_left {
+                width: 130px;
+            }
+        }
+    }
+
+
+    .team {
+        min-height: 849px;
+        background: #28282A url('../img/gray_circles_2.png') 35px 650px no-repeat;
+        &__title {
+            font-size: 42px;
+        }
+        &__text {
+            font-size: 15px;
+        }
+        &__coach {
+            width: 225px;
+            &-position {
+                font-size: 15px;
+            }
+            &-data {
+                width: 120px;
+            }
+            &-position {
+                font-size: 14px;
+            }
+            &-icon {
+                border: 3px solid #f23849;
+                width: 50px;
+            }
+            &-bg {
+                height: 165px;
+            }
+            &-link {
+                width: 30px;
+                height: 30px;
+                .link-wrapper {
+                    width: 13px;
+                }
+                &:last-child {
+                    .link-wrapper {
+                        width: 9px;
+                    }
+                }
+            }
+            &:nth-child(1) {
+                .team__coach-photo {
+                    width: 173px;
+                }
+            }
+            &:nth-child(2) {
+                .team__coach-photo {
+                    width: 210px;
+                }
+            }
+            &:nth-child(3) {
+                .team__coach-photo {
+                    width: 225px;
+                }
+            }
+        }
+    }
+
+    .clients {
+        padding: 103px 0;
+        &__title {
+            font-size: 40px;
+            margin: 0 0 10px 0;
+        }
+        &__subtitle {
+            font-size: 15px;
+            margin: 0 0 50px 0;
+        }
+        &__content {
+            flex-direction: column;
+            justify-content: start;
+        }
+        .client {
+            margin: 0 auto 70px auto;
+            &__text {
+                margin: 0 0 25px 0;
+                text-align: center;
+            }
+            &__contacts {
+                margin: 0 0 45px 0;
+            }
+            &__name {
+                text-align: center;
+                margin: 0 0 30px 0;
+            }
+            &__networks, &__slider {
+                margin: 0 auto;
+            }
+        }
+        &__images {
+            height: 430px;
+            margin: 0 auto;
+        }
+    }
+
+    .features {
+        &__wrapper {
+            grid-template: repeat(5, 1fr) / 1fr;
+            .space {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background: #3D3D40;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &__item {
+            margin: 0 auto;
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            justify-content: space-around;
+        }
+        &__contacts {
+            &-logo {
+                width: 80px;
+            }
+        }
+        &__services, &__corporate {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 2;
+        }
+        .container {
+            padding: 0;
+        }
+        &__list, &__btn {
+            display: none;
+        }
+        &__content {
+            justify-content: space-between;
+            position: relative;
+            padding: 20px 15px;
+        }
+        &__list {
+            display: block;
+            overflow: auto;
+            /* position: fixed; */
+            position: absolute;
+            top: -1000px;
+            left: 0;
+            width: 100%;
+            /* height: 100%; */
+            height: 500px;
+            background-color: #222224;
+            padding: 100px 0 30px 0;
+            opacity: 0.98;
+            transition: all 0.3s ease 0s;
+            &.active {
+                top: 0;
+            }
+        }
+        &__logo {
+            position: relative;
+            z-index: 3;
+        }
+        &__burger {
+            width: 40px;
+            height: 30px;
+            position: relative;
+            z-index: 3;
+            &::before, &::after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color:#fff;
+                position: absolute;
+                transition: all 0.3s ease 0s;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+            }
+            &::after {
+                bottom: 0;
+                left: 0;
+            }
+            & span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                transition: all 0.3s ease 0s;
+            }
+            &.active {
+                &:before {
+                    transform: rotate(45deg) translateY(-50%);
+                    top: 50%;
+                }
+                &:after {
+                    transform: rotate(-45deg) translateY(50%);
+                    bottom: 50%;
+                }
+                & span {
+                    display: none;
+                }
+            }
+        }
+        &__item {
+            max-width: none;
+            &:last-child {
+                margin: 0;
+            }
+            text-align: center;
+            margin: 0 0 30px 0;
+            a {
+                font-size: 27px;
+                &:hover {
+                    color: #fff;
+                }
+                &:active {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    .tagline {
+        background: url(../img/man.png) -920px 0 no-repeat;
+        &__bigtext {
+            width: 360px;
+            font-size: 35px;
+        }
+        &__smalltext {
+            width: 265px;
+            font-size: 15px;
+        }
+        &__btn {
+            width: 160px;
+        }
+    }
+
+    .components {
+        &__items {
+            justify-content: space-between;
+            .item {
+                width: 155px;
+            }
+        }
+        .info {
+            &__title {
+                font-size: 32px;
+            }
+            &__descr {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    .join {
+        &__question {
+            width: 360px;
+        }
+        &__subtitle {
+            font-size: 36px;
+            width: 270px;
+        }
+        &__btn {
+            width: 145px;
+        }
+        &__reasons {
+            grid-template: repeat(3,auto)/repeat(2,203px);
+        }
+        &__icon {
+            width: 75px;
+        }
+    }
+
+
+    .benefits {
+        &__right {
+            display: none;
+        }
+        &__left {
+            width: 100%;
+            padding: 0;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__description {
+            width: 335px;
+            text-align: center;
+            margin: 0 auto 50px auto;
+            font-size: 15px;
+        }
+        &__item {
+            justify-content: space-between;
+            width: 380px;
+            margin: 0 auto 50px auto;
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+        &__text {
+            width: 300px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+    }
+
+    .prices {
+        padding: 100px 0;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            width: 270px;
+        }
+        &__packages-container {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        &__package {
+            min-height: 460px;
+            width: 270px;
+            padding: 20px 0;
+            margin: 0 0 45px 0;
+            &:last-child {
+                margin: 0;
+            }
+            .package {
+                &__name {
+                    margin: 0 0 15px 0;
+                }
+                &__price {
+                    &_old {
+                        margin: 0 0 10px 0;
+                    }
+                }
+                &__btn.cause_modal {
+                    &:active {
+                        background-color: #fff;
+                        color: $main-color;
+                    }
+                }
+            }
+            &:hover {
+                background-color: #343436;
+                transform: none;
+                .package__btn {
+                    background-color: #222224;
+                    color: #fff;
+                }
+            }
+        }
+        &__gray-circles {
+            display: none;
+        }
+    }
+
+    .team {
+        background: #28282A;
+        &__coaches {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        &__coach {
+            margin: 0 0 55px 0;
+            &:last-child {
+                margin: 0;
+            }
+            &-link {
+                width: 27px;
+                height: 27px;
+                .link-wrapper {
+                    width: 11px;
+                }
+                &:last-child {
+                    .link-wrapper {
+                        width: 7px;
+                    }
+                }
+            }
+            &:hover  {
+                transform: none;
+            }
+            &:hover .team__coach-bg {
+                background-color: #333335;
+            }
+            &:hover .team__coach-descr {
+                background-color: #fff;
+            }
+            &:hover .team__coach-name, &:hover .team__coach-position {
+                color: $main-color;
+            }
+        }
+        
+        
+       
+    }
+
+    .clients {
+        &__title {
+            font-size: 32px;
+        }
+        &__subtitle {
+            width: 300px;
+            margin: 0 auto 50px auto;
+        }
+        &__images {
+            width: 440px;
+            &-wrapper {
+                width: 155px;
+                height: 155px;
+            }
+        }
+        .choosen-client {
+            width: 215px;
+            height: 215px;
+        }
+        &__info {
+            .client {
+                &__slider {
+                    width: 252px;
+                    height: 100px;
+                    .button__wrapper {
+                        width: 123px;
+                        &:hover {
+                            background-color: #28282A;
+                        }
+                    }       
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__contacts {
+            width: 200px;
+            &-text {
+                width: 153px;
+                margin: 0 0 0 13px;
+            }
+        }
+    }
+
+    .modal {
+        &__content {
+            width: 370px;
+        }
+        &__title {
+            width: 270px;
+            margin: 0 auto 20px auto;
+        }
+        &__form {
+            width: 260px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tagline {
+        background: url(../img/man.png) -1000px 0 no-repeat;
+        &__bigtext {
+            width: 280px;
+            font-size: 30px;
+        }
+        &__smalltext {
+            width: 225px;
+            font-size: 14px;
+        }
+        &__btn {
+            width: 155px;
+        }
+    }
+    
+    .components {
+        &__items {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            .item {
+                width: 210px;
+                padding: 20px;
+                position: relative;
+                margin: 0 0 30px 0;
+                &:last-child {
+                    margin: 0;
+                }
+                &::before {
+                    content: '';
+                    width: 30px;
+                    height: 0.5px;
+                    background-color: $main-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &::after {
+                    content: '';
+                    width: 0.5px;
+                    height: 30px;
+                    background-color: $main-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .frame {
+                    &:nth-child(4) {
+                        width: 30px;
+                        height: 0.5px;
+                        background-color: $main-color;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    &:nth-child(5) {
+                        width: 0.5px;
+                        height: 30px;
+                        background-color: $main-color;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .info {
+            width: 315px;
+            &__title {
+                font-size: 30px;
+            }
+        }
+    }
+    .about {
+        &__left, &__right {
+            width: 390px;
+        }
+        &__title {
+            font-size: 30px;
+            width: 333px;
+            margin: 0 auto 20px auto;
+        }
+        &__graphic {
+            width: 60px;
+        }
+        &__orange {
+            width: 105px;
+        }
+    }
+    .join {
+        &__question {
+            width: 300px;
+            padding: 20px 0 35px 0;
+        }
+        &__subtitle {
+            width: 230px;
+            font-size: 30px;
+            margin: 0 auto 30px auto;
+        }
+        &__btn {
+            width: 120px;
+            font-size: 15px;
+        }
+        &__reasons {
+            grid-template: repeat(3,auto)/repeat(2, 180px);
+        }
+        &__icon {
+            width: 60px;
+        }
+        &__text {
+            width: 120px;
+            font-size: 15px;
+        }
+    }
+    .benefits {
+        &__description {
+            width: 300px;
+            font-size: 14px;
+        }
+    }
+    .team {
+        &__title {
+            font-size: 32px;
+        }
+        &__text {
+            font-size: 14px;
+            width: 300px;
+            margin: 0 auto 40px auto;
+        }
+    }
+    .clients {
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__info {
+            width: 360px;
+            .client {
+                &__text {
+                    font-size: 13px;
+                }
+            }
+        }
+        &__images {
+            width: 100%;
+        }
+    }
+    .features {
+        &__icon {
+            width: 50px;
+        }
+        &__descr {
+            &-title {
+                font-size: 18px;
+            }
+            &-text {
+                font-size: 13px;
+            }
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        &__contacts {
+            width: 100%;
+            margin: 0 0 45px 0;
+            position: relative;
+            &-logo {
+                display: block;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-descr {
+                width: 270px;
+                margin: 0;
+                text-align: end;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            &-items {
+                flex-direction: row;
+                margin: 120px 0 0 0;
+            }
+            &-item {
+                margin: 0;
+                flex-direction: column;
+                width: 30%;
+                &:nth-child(2) {
+                    width: 40%;
+                }
+                &:nth-child(3) {
+                    .footer__contacts-text {
+                        width: 122px;
+                    }
+                }
+
+            }
+            &-text {
+                margin: 10px 0 0 0;
+                justify-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        &__content {
+            padding: 10px 15px;
+        }
+        &__logo {
+            width: 70px;
+        }
+        &__burger {
+            width: 35px;
+            height: 25px;
+            &::after, &::before, & span {
+                height: 2.5px;
+            }
+        }
+        &__item {
+            a {
+                font-size: 23px;
+            }
+        }
+    }
+    .tagline {
+        background: url(../img/man.png) -1155px 0 no-repeat;
+        &__bigtext {
+            width: 200px;
+            font-size: 28px;
+        }
+        &__smalltext {
+            width: 155px;
+            font-size: 11px;
+        }
+        &__btn {
+            width: 125px;
+            font-size: 14px;
+        }
+    }
+    .components {
+        .info {
+            width: 245px;
+            &__title {
+                font-size: 25px;
+            }
+            &__descr {
+                font-size: 14px;
+            }
+        }
+    }
+    .about {
+        &__left, &__right {
+            width: 100%;
+        }
+        &__title {
+            width: 100%;
+            font-size: 25px;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+        &__graphic {
+            width: 40px;
+        }
+        &__rectangle {
+            font-size: 11px;
+        }
+        &__month {
+            font-size: 14px;
+        }
+        &__orange {
+            width: 90px;
+        }
+    }
+
+    .join {
+        &__question {
+            width: 195px;
+        }
+        &__subtitle {
+            width: 160px;
+            font-size: 20px;
+        }
+        &__btn {
+            width: 90px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 12px;
+        }
+        &__reasons {
+            width: 100%;
+            grid-template: repeat(3,auto)/repeat(2, 1fr);
+        }
+        &__item {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__icon {
+            margin: 0 0 15px 0;
+        }
+        &__text {
+            padding: 0;
+            width: auto;
+        }
+    }
+    .benefits {
+        &__title {
+            font-size: 25px;
+        }
+        &__description {
+            width: 245px;
+            font-size: 13px;
+        }
+        &__item {
+            width: 100%;
+            flex-direction: column;
+        }
+        &__text {
+            padding: 0;
+            text-align: center;
+            width: 200px;
+        }
+        &__subtitle {
+            text-align: center;
+            font-size: 17px;
+            width: 180px;
+        }
+        &__subtitle, &__icon {
+            margin: 0 0 12px 0;
+        }
+    }
+    .prices {
+        &__title {
+            width: 250px;
+            font-size: 25px;
+        }
+        &__descr {
+            width: 210px;
+        }
+        &__tariffs {
+            flex-direction: column;
+            width: 210px;
+            transform: translateX(0);
+            align-items: flex-end;
+            min-height: 70px;
+            margin: 0 auto 30px auto;
+        }
+        &__discount {
+            transform: translateX(14px);
+        }
+        &__package {
+            width: 250px;
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+
+    .team {
+        &__title {
+            font-size: 25px;
+        }
+        &__text {
+            width: 230px;
+        }
+        &__coach:hover {
+            transform: none;
+        }
+    }
+
+    .clients {
+        &__title {
+            font-size: 25px;
+        }
+        &__subtitle {
+            width: 200px;
+            font-size: 13px;
+        }
+        .client {
+            width: 100%;
+            &__networks {
+                &-bg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        &__images {
+            .choosen-client {
+                width: 145px;
+                height: 145px;
+            }
+            &-wrapper {
+                width: 110px;
+                height: 110px;
+                &:nth-child(2) {
+                    top: 25%;
+                    right: 0;
+                    &.choosen-client {
+                        transform: translateY(-17px);
+                    }
+                }
+                &:nth-child(3) {
+                    top: calc(25% + 110px);
+                    left: 0;
+                    &.choosen-client {
+                        transform: translateY(-20px);
+                    }
+                }
+                &:nth-child(4) {
+                    bottom: 0;
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+    .footer {
+        &__contacts {
+            &-logo {
+                position: relative;
+                margin: 0 auto 20px auto;
+            }
+            &-descr {
+                position: relative;
+                text-align: center;
+                width: 210px;
+                margin: 0 auto 40px auto;
+            }
+
+            &-items {
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+            }
+            &-item {
+                width: 100%;
+                margin: 0 0 30px 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+        &__timetable {
+            width: 248px;
+            &-title {
+                font-size: 17px;
+            }
+            &-sunday {
+                width: 80px;
+                font-size: 10px;
+            }
+            &-item {
+                .item {
+                    &__day {
+                        &-name {
+                            font-size: 13px;
+                        }
+                    }
+                    &__hours {
+                        width: 85px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        &__content {
+            width: 265px;
+        }
+        &__title {
+            width: 205px;
+            margin: 0 auto 20px auto;
+            font-size: 19px;
+        }
+        &__form {
+            width: 200px;
+        }
+    }
+}
+@media (max-width: 362px) {
+    .about {
+        &__graphic {
+            width: 28px;
+        }
+        &__orange {
+            width: 75px;
+        }
+    }
+}
+

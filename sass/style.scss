@@ -1,0 +1,43 @@
+@import 'base/variables';
+@import 'blocks/header';
+@import 'blocks/btn';
+@import 'blocks/tagline';
+@import 'blocks/components';
+@import 'blocks/about';
+@import 'blocks/join';
+@import 'blocks/benefits';
+@import 'blocks/prices';
+@import 'blocks/team';
+@import 'blocks/circle-wrapper';
+@import 'blocks/clients';
+@import 'blocks/features';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/choosen_client';
+@import 'blocks/pageup';
+@import 'blocks/hide';
+@import 'blocks/lock';
+@import 'blocks/media';
+
+
+
+* {
+    color: #fff;
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1390px;
+    padding: 0 35px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+

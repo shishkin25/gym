@@ -1,0 +1,88 @@
+.benefits {
+    background: url('../img/gallery.png') 1700px 183px no-repeat, url('../img/gray_circles.png') 0 0 no-repeat;
+    background-color: #28282A;
+    padding: 130px 0 123px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        padding: 81px 0 0 0;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 46px;
+        margin: 0 0 20px 0;
+    }
+    &__description {
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0 0 50px 0;
+        width: 467px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 55px 0;
+    }
+    &__icon {
+        background-color: $main-color;
+        width: 80px;
+        height: 80px;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img-wrapper {
+            width: 50px;
+            height: 50px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 24px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #969696;
+    }
+    &__text {
+        width: 470px;
+        padding: 0 0 0 20px;
+    }
+    &__right {
+        width: 679px;
+        position: relative;
+    }
+    &__img {
+        width: 350px;
+        img {
+            max-width: 100%;
+        }
+        &:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 18px;
+        }
+        &:nth-child(2) {
+            position: absolute;
+            top: 59px;
+            left: 329px;
+        }
+        &:nth-child(3) {
+            position: absolute;
+            top: 284px;
+            left: 0px;
+        }
+        &:nth-child(4) {
+            position: absolute;
+            top: 348px;
+            left: 320px;
+        }
+    }
+}

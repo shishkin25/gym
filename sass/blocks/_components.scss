@@ -1,0 +1,83 @@
+.components {
+    min-height: 437px;
+    padding: 106px 0;
+    background: #222224;
+    &__content {
+        display: grid;
+        grid-template: 1fr / 827px 1fr;
+    }
+    &__items {
+        display: flex; 
+        justify-content: space-between;
+        .item {
+            width: 246px;
+            text-align: center;
+            &__logo {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 30px auto;
+                img {
+                    width: 100%;
+                }
+                
+            }
+            &__title {
+                margin: 0 0 20px 0;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                text-transform: uppercase;
+            }
+            &__text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #EDEDED;
+            }
+        }
+    }
+    &__text, &__text-less1320px {
+        padding: 0 0 0 67px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 250px;
+            width: 1px;
+            background-color: #000;
+            top: -32px;
+            left: 45px;
+            border: 1px solid #3D3D40;
+        }
+        .info {
+            &__title {
+                width: 329px;
+                font-weight: 700;
+                font-size: 46px;
+                text-transform: capitalize;
+                margin: 0 0 10px 0;
+            }
+            &__descr {
+                width: 100%;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+    &__text-less1320px {
+        display: none;
+        padding: 15px 0 0 0;
+        width: 427px;
+        margin: 0 auto;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: #000;
+            top: 0;
+            left: 0;
+            border: 1px solid #3D3D40;
+        }
+    }
+}
